@@ -10,6 +10,7 @@ python scripts/reaggregate.py
 ```
 
 This level verifies every released file and recomputes the principal scene/venue-equal RMSE values from the per-image records.
+The per-resource records are `manifests/or1_sha256.txt`, `manifests/or2_sha256.txt`, and `manifests/or3_sha256.txt`; the manuscript supplement reports the SHA-256 of each record file.
 
 ## Level 2: regional summaries and figures
 

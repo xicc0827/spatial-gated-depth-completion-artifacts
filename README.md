@@ -10,6 +10,7 @@ This repository contains the frozen evaluation records, protocol files, reaggreg
 - `training_snapshot`: source-domain sampling manifests, loss calibration records, and the compact adapter/core snapshot.
 - `scripts`: portable gate, metric, reaggregation, and integrity-check scripts.
 - `manifests/checkpoint_hashes.csv`: model identity and SHA-256 values. Model weights are not redistributed.
+- `manifests/or1_sha256.txt`, `or2_sha256.txt`, and `or3_sha256.txt`: file-level integrity records for the three online resources.
 - `figures`: statistics and source code for the three core figures.
 
 ## Quick verification
