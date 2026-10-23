@@ -1,0 +1,11 @@
+{
+  "status": "NEW_PREPROCESSING_MODEL_PATH_FINITE_OUTPUT_PASS",
+  "scope": "engineering check only, separate development visit; no evaluation results",
+  "environment": {
+    "torch": "2.7.0+cu128",
+    "gpu": "NVIDIA GeForce RTX 5060 Ti",
+    "tf32_matmul": false,
+    "tf32_cudnn": true
+  },
+  "completed_images": 1
+}

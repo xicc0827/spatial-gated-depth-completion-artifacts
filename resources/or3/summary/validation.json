@@ -1,0 +1,17 @@
+{
+  "images": 247,
+  "venues": 20,
+  "score_rows": 95095,
+  "region_rows": 296400,
+  "plan_sha256": "8b17d713b448316e2d9e6072ac247a2945b8cf1e0d7edf0b74a4400a22ae31de",
+  "receipt_sha256": "0b85f16937567195b355497fe3229b43f86fc167519c96a0fbcedd60edb68eae",
+  "all_file_hashes_verified": true,
+  "exact_condition_grids": true,
+  "coordinate_pairing_verified": true,
+  "whole_image_mse_checks": 59280,
+  "partition_and_algebra_verified": true,
+  "max_algebra_residual": 2.7483793019200675e-11,
+  "independent_primary_aggregation_max_difference": 1.1102230246251565e-16,
+  "time_order_verified": true,
+  "scope": "New project-local venue evaluation, prospectively fixed after DIODE analysis; full source-trained methods and fixed inference unchanged"
+}

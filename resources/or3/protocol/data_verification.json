@@ -1,0 +1,8 @@
+{
+  "archives_sha256_checked": 20,
+  "native_pixel_maps_verified": 247,
+  "support_sets_verified": 13585,
+  "depth_units": "millimetres to metres",
+  "rotation_and_resize_map_verified": true,
+  "scope": "Independent raw source pixel mapping and valid-support verification; no predictions"
+}

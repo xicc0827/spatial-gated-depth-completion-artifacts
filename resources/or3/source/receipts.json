@@ -1,0 +1,38 @@
+[
+  {
+    "name": "splits.csv",
+    "url": "https://raw.githubusercontent.com/apple-aiml-research/ARKitScenes/main/depth_upsampling/upsampling_train_val_splits.csv",
+    "bytes": 57022,
+    "sha256": "ff3687bac28b3c6a02b2d34446945c7743c78cedd0db21a87fa15fa3266a9360"
+  },
+  {
+    "name": "metadata.csv",
+    "url": "https://docs-assets.developer.apple.com/ml-research/datasets/arkitscenes/v1/upsampling/metadata.csv",
+    "bytes": 68806,
+    "sha256": "2734f20cd7df54106dd7aad9b6f7614f3d525159a905e501f8e2ca3794e571a7"
+  },
+  {
+    "name": "README.md",
+    "url": "https://raw.githubusercontent.com/apple-aiml-research/ARKitScenes/main/depth_upsampling/README.md",
+    "bytes": 3517,
+    "sha256": "1abbd3b70085491fb282f77fb8a8ebba3c0fbf9e0eaab7573396b5ade77069a9"
+  },
+  {
+    "name": "DATA.md",
+    "url": "https://raw.githubusercontent.com/apple-aiml-research/ARKitScenes/main/DATA.md",
+    "bytes": 4704,
+    "sha256": "bc849eea6ec95fd41513b7ad085dbb943d8f4b4c87f9fd999bdabd7e3aa63c52"
+  },
+  {
+    "name": "LICENSE",
+    "url": "https://raw.githubusercontent.com/apple-aiml-research/ARKitScenes/main/LICENSE",
+    "bytes": 4796,
+    "sha256": "1b6a8700127de50c9d56f8f33eb202a64f6f212fd4b133435f7c8b6bccd3db59"
+  },
+  {
+    "name": "dataset_paper.html",
+    "url": "https://arxiv.org/html/2111.08897v2",
+    "bytes": 160768,
+    "sha256": "5a46d831886e7f44a8bda64b35be10855170569bea27eb64e03f020018fa7e32"
+  }
+]

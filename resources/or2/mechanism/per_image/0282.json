@@ -1,0 +1,14 @@
+{
+  "plan_sha256": "96b47367e6dbedb2fa1d04378f8937d14acee5a88eeac7340482d78f18042d7d",
+  "sha256": "152d9f099e405d9d56a69f1a3f5c6cfb6b9fdcb003b7b6820c52eec6ec1f3ae1",
+  "rows": 1200,
+  "replay_max": 0.0,
+  "identity_max": 1.9099388737231493e-11,
+  "omitted_pixel_exemplars": [
+    {
+      "filename": "0282_top_0.npz",
+      "sha256": "8d803d884e3947752614469929d8911e5de2ab4940a13a0b6028f71b871a84f2"
+    }
+  ],
+  "omission_reason": "Contains third-party RGB/depth pixels; regenerate from the licensed DIODE source data."
+}

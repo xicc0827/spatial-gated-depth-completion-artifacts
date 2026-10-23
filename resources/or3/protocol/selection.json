@@ -1,0 +1,572 @@
+{
+  "status": "METADATA_COHORT_SELECTION_BEFORE_PIXELS_OR_PREDICTIONS",
+  "created_unix": 1792569029.6983428,
+  "official_validation_videos": 287,
+  "eligible_visits": 70,
+  "ordering": "sha256(MVA_new_scene_20261021|visit_id) ascending; lexicographic first upright-compatible video per visit",
+  "eligibility": "Official Validation; sky_direction Up or Down; same visit never crosses preprocessing/evaluation",
+  "target_visits": 20,
+  "frames_per_video": 15,
+  "selected": [
+    {
+      "video_id": "47333440",
+      "visit_id": "467176",
+      "sky_direction": "Up",
+      "fold": "Validation",
+      "role": "preprocessing_check",
+      "rank": 0
+    },
+    {
+      "video_id": "42898818",
+      "visit_id": "434641",
+      "sky_direction": "Down",
+      "fold": "Validation",
+      "role": "evaluation",
+      "rank": 1
+    },
+    {
+      "video_id": "42897541",
+      "visit_id": "422826",
+      "sky_direction": "Up",
+      "fold": "Validation",
+      "role": "evaluation",
+      "rank": 2
+    },
+    {
+      "video_id": "41069021",
+      "visit_id": "381658",
+      "sky_direction": "Up",
+      "fold": "Validation",
+      "role": "evaluation",
+      "rank": 3
+    },
+    {
+      "video_id": "42899619",
+      "visit_id": "435368",
+      "sky_direction": "Up",
+      "fold": "Validation",
+      "role": "evaluation",
+      "rank": 4
+    },
+    {
+      "video_id": "42446038",
+      "visit_id": "422015",
+      "sky_direction": "Down",
+      "fold": "Validation",
+      "role": "evaluation",
+      "rank": 5
+    },
+    {
+      "video_id": "42897501",
+      "visit_id": "422851",
+      "sky_direction": "Up",
+      "fold": "Validation",
+      "role": "evaluation",
+      "rank": 6
+    },
+    {
+      "video_id": "45663149",
+      "visit_id": "469021",
+      "sky_direction": "Up",
+      "fold": "Validation",
+      "role": "evaluation",
+      "rank": 7
+    },
+    {
+      "video_id": "47333923",
+      "visit_id": "467306",
+      "sky_direction": "Up",
+      "fold": "Validation",
+      "role": "evaluation",
+      "rank": 8
+    },
+    {
+      "video_id": "48018559",
+      "visit_id": "483621",
+      "sky_direction": "Up",
+      "fold": "Validation",
+      "role": "evaluation",
+      "rank": 9
+    },
+    {
+      "video_id": "47331322",
+      "visit_id": "468286",
+      "sky_direction": "Up",
+      "fold": "Validation",
+      "role": "evaluation",
+      "rank": 10
+    },
+    {
+      "video_id": "42897561",
+      "visit_id": "422785",
+      "sky_direction": "Up",
+      "fold": "Validation",
+      "role": "evaluation",
+      "rank": 11
+    },
+    {
+      "video_id": "47334239",
+      "visit_id": "470101",
+      "sky_direction": "Down",
+      "fold": "Validation",
+      "role": "evaluation",
+      "rank": 12
+    },
+    {
+      "video_id": "47333927",
+      "visit_id": "467305",
+      "sky_direction": "Up",
+      "fold": "Validation",
+      "role": "evaluation",
+      "rank": 13
+    },
+    {
+      "video_id": "45663113",
+      "visit_id": "469013",
+      "sky_direction": "Up",
+      "fold": "Validation",
+      "role": "evaluation",
+      "rank": 14
+    },
+    {
+      "video_id": "45260898",
+      "visit_id": "466192",
+      "sky_direction": "Up",
+      "fold": "Validation",
+      "role": "evaluation",
+      "rank": 15
+    },
+    {
+      "video_id": "47204559",
+      "visit_id": "471948",
+      "sky_direction": "Up",
+      "fold": "Validation",
+      "role": "evaluation",
+      "rank": 16
+    },
+    {
+      "video_id": "47334256",
+      "visit_id": "470098",
+      "sky_direction": "Down",
+      "fold": "Validation",
+      "role": "evaluation",
+      "rank": 17
+    },
+    {
+      "video_id": "47332885",
+      "visit_id": "469272",
+      "sky_direction": "Up",
+      "fold": "Validation",
+      "role": "evaluation",
+      "rank": 18
+    },
+    {
+      "video_id": "45663164",
+      "visit_id": "469011",
+      "sky_direction": "Up",
+      "fold": "Validation",
+      "role": "evaluation",
+      "rank": 19
+    },
+    {
+      "video_id": "45260854",
+      "visit_id": "466193",
+      "sky_direction": "Down",
+      "fold": "Validation",
+      "role": "evaluation",
+      "rank": 20
+    },
+    {
+      "video_id": "42446540",
+      "visit_id": "422381",
+      "sky_direction": "Up",
+      "fold": "Validation",
+      "role": "reserve",
+      "rank": 21
+    },
+    {
+      "video_id": "47331988",
+      "visit_id": "470811",
+      "sky_direction": "Up",
+      "fold": "Validation",
+      "role": "reserve",
+      "rank": 22
+    },
+    {
+      "video_id": "42897552",
+      "visit_id": "422803",
+      "sky_direction": "Up",
+      "fold": "Validation",
+      "role": "reserve",
+      "rank": 23
+    },
+    {
+      "video_id": "41142278",
+      "visit_id": "384651",
+      "sky_direction": "Up",
+      "fold": "Validation",
+      "role": "reserve",
+      "rank": 24
+    },
+    {
+      "video_id": "42897688",
+      "visit_id": "423441",
+      "sky_direction": "Up",
+      "fold": "Validation",
+      "role": "reserve",
+      "rank": 25
+    },
+    {
+      "video_id": "47331068",
+      "visit_id": "470352",
+      "sky_direction": "Down",
+      "fold": "Validation",
+      "role": "reserve",
+      "rank": 26
+    },
+    {
+      "video_id": "47429998",
+      "visit_id": "470541",
+      "sky_direction": "Up",
+      "fold": "Validation",
+      "role": "reserve",
+      "rank": 27
+    },
+    {
+      "video_id": "42445429",
+      "visit_id": "421372",
+      "sky_direction": "Down",
+      "fold": "Validation",
+      "role": "reserve",
+      "rank": 28
+    },
+    {
+      "video_id": "45261575",
+      "visit_id": "468079",
+      "sky_direction": "Down",
+      "fold": "Validation",
+      "role": "reserve",
+      "rank": 29
+    },
+    {
+      "video_id": "44358451",
+      "visit_id": "460417",
+      "sky_direction": "Up",
+      "fold": "Validation",
+      "role": "reserve",
+      "rank": 30
+    },
+    {
+      "video_id": "47429922",
+      "visit_id": "471425",
+      "sky_direction": "Up",
+      "fold": "Validation",
+      "role": "reserve",
+      "rank": 31
+    },
+    {
+      "video_id": "47331336",
+      "visit_id": "469319",
+      "sky_direction": "Up",
+      "fold": "Validation",
+      "role": "reserve",
+      "rank": 32
+    },
+    {
+      "video_id": "48018737",
+      "visit_id": "483618",
+      "sky_direction": "Up",
+      "fold": "Validation",
+      "role": "reserve",
+      "rank": 33
+    },
+    {
+      "video_id": "47115452",
+      "visit_id": "470661",
+      "sky_direction": "Down",
+      "fold": "Validation",
+      "role": "reserve",
+      "rank": 34
+    },
+    {
+      "video_id": "47332893",
+      "visit_id": "469266",
+      "sky_direction": "Down",
+      "fold": "Validation",
+      "role": "reserve",
+      "rank": 35
+    },
+    {
+      "video_id": "47895355",
+      "visit_id": "472487",
+      "sky_direction": "Up",
+      "fold": "Validation",
+      "role": "reserve",
+      "rank": 36
+    },
+    {
+      "video_id": "44358442",
+      "visit_id": "460419",
+      "sky_direction": "Up",
+      "fold": "Validation",
+      "role": "reserve",
+      "rank": 37
+    },
+    {
+      "video_id": "47895779",
+      "visit_id": "482296",
+      "sky_direction": "Up",
+      "fold": "Validation",
+      "role": "reserve",
+      "rank": 38
+    },
+    {
+      "video_id": "45260920",
+      "visit_id": "466183",
+      "sky_direction": "Up",
+      "fold": "Validation",
+      "role": "reserve",
+      "rank": 39
+    },
+    {
+      "video_id": "42444966",
+      "visit_id": "421383",
+      "sky_direction": "Down",
+      "fold": "Validation",
+      "role": "reserve",
+      "rank": 40
+    },
+    {
+      "video_id": "47331262",
+      "visit_id": "468267",
+      "sky_direction": "Up",
+      "fold": "Validation",
+      "role": "reserve",
+      "rank": 41
+    },
+    {
+      "video_id": "45261588",
+      "visit_id": "468073",
+      "sky_direction": "Down",
+      "fold": "Validation",
+      "role": "reserve",
+      "rank": 42
+    },
+    {
+      "video_id": "42897545",
+      "visit_id": "422813",
+      "sky_direction": "Up",
+      "fold": "Validation",
+      "role": "reserve",
+      "rank": 43
+    },
+    {
+      "video_id": "42446517",
+      "visit_id": "422391",
+      "sky_direction": "Up",
+      "fold": "Validation",
+      "role": "reserve",
+      "rank": 44
+    },
+    {
+      "video_id": "47333898",
+      "visit_id": "467314",
+      "sky_direction": "Down",
+      "fold": "Validation",
+      "role": "reserve",
+      "rank": 45
+    },
+    {
+      "video_id": "42446163",
+      "visit_id": "422014",
+      "sky_direction": "Down",
+      "fold": "Validation",
+      "role": "reserve",
+      "rank": 46
+    },
+    {
+      "video_id": "47204552",
+      "visit_id": "471952",
+      "sky_direction": "Down",
+      "fold": "Validation",
+      "role": "reserve",
+      "rank": 47
+    },
+    {
+      "video_id": "47895341",
+      "visit_id": "472297",
+      "sky_direction": "Up",
+      "fold": "Validation",
+      "role": "reserve",
+      "rank": 48
+    },
+    {
+      "video_id": "47331661",
+      "visit_id": "466846",
+      "sky_direction": "Down",
+      "fold": "Validation",
+      "role": "reserve",
+      "rank": 49
+    },
+    {
+      "video_id": "48018566",
+      "visit_id": "483620",
+      "sky_direction": "Up",
+      "fold": "Validation",
+      "role": "reserve",
+      "rank": 50
+    },
+    {
+      "video_id": "42446533",
+      "visit_id": "422382",
+      "sky_direction": "Up",
+      "fold": "Validation",
+      "role": "reserve",
+      "rank": 51
+    },
+    {
+      "video_id": "47333916",
+      "visit_id": "467311",
+      "sky_direction": "Up",
+      "fold": "Validation",
+      "role": "reserve",
+      "rank": 52
+    },
+    {
+      "video_id": "47115469",
+      "visit_id": "470652",
+      "sky_direction": "Up",
+      "fold": "Validation",
+      "role": "reserve",
+      "rank": 53
+    },
+    {
+      "video_id": "47430003",
+      "visit_id": "470537",
+      "sky_direction": "Up",
+      "fold": "Validation",
+      "role": "reserve",
+      "rank": 54
+    },
+    {
+      "video_id": "42445991",
+      "visit_id": "422024",
+      "sky_direction": "Up",
+      "fold": "Validation",
+      "role": "reserve",
+      "rank": 55
+    },
+    {
+      "video_id": "45662970",
+      "visit_id": "468712",
+      "sky_direction": "Down",
+      "fold": "Validation",
+      "role": "reserve",
+      "rank": 56
+    },
+    {
+      "video_id": "42446527",
+      "visit_id": "422386",
+      "sky_direction": "Up",
+      "fold": "Validation",
+      "role": "reserve",
+      "rank": 57
+    },
+    {
+      "video_id": "41069048",
+      "visit_id": "381644",
+      "sky_direction": "Up",
+      "fold": "Validation",
+      "role": "reserve",
+      "rank": 58
+    },
+    {
+      "video_id": "47332915",
+      "visit_id": "469249",
+      "sky_direction": "Down",
+      "fold": "Validation",
+      "role": "reserve",
+      "rank": 59
+    },
+    {
+      "video_id": "48018732",
+      "visit_id": "483632",
+      "sky_direction": "Up",
+      "fold": "Validation",
+      "role": "reserve",
+      "rank": 60
+    },
+    {
+      "video_id": "48458660",
+      "visit_id": "484534",
+      "sky_direction": "Up",
+      "fold": "Validation",
+      "role": "reserve",
+      "rank": 61
+    },
+    {
+      "video_id": "42897521",
+      "visit_id": "422829",
+      "sky_direction": "Up",
+      "fold": "Validation",
+      "role": "reserve",
+      "rank": 62
+    },
+    {
+      "video_id": "47333452",
+      "visit_id": "467172",
+      "sky_direction": "Up",
+      "fold": "Validation",
+      "role": "reserve",
+      "rank": 63
+    },
+    {
+      "video_id": "45261179",
+      "visit_id": "466802",
+      "sky_direction": "Up",
+      "fold": "Validation",
+      "role": "reserve",
+      "rank": 64
+    },
+    {
+      "video_id": "42898811",
+      "visit_id": "434650",
+      "sky_direction": "Down",
+      "fold": "Validation",
+      "role": "reserve",
+      "rank": 65
+    },
+    {
+      "video_id": "47430033",
+      "visit_id": "470512",
+      "sky_direction": "Up",
+      "fold": "Validation",
+      "role": "reserve",
+      "rank": 66
+    },
+    {
+      "video_id": "47204573",
+      "visit_id": "471940",
+      "sky_direction": "Up",
+      "fold": "Validation",
+      "role": "reserve",
+      "rank": 67
+    },
+    {
+      "video_id": "48018379",
+      "visit_id": "483312",
+      "sky_direction": "Down",
+      "fold": "Validation",
+      "role": "reserve",
+      "rank": 68
+    },
+    {
+      "video_id": "45662981",
+      "visit_id": "468711",
+      "sky_direction": "Down",
+      "fold": "Validation",
+      "role": "reserve",
+      "rank": 69
+    }
+  ]
+}

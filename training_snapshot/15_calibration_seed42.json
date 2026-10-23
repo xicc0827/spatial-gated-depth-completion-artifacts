@@ -1,0 +1,47 @@
+{
+  "weights": {
+    "geom": 22.86582664456012,
+    "feature": 2.7489320359092635,
+    "gradient_norms": {
+      "depth": [
+        5.491415977478027,
+        1.1859947443008423,
+        2.416691541671753,
+        1.4759019613265991
+      ],
+      "geom": [
+        0.09246676415205002,
+        0.028609659522771835,
+        0.05394010618329048,
+        0.056114502251148224
+      ],
+      "teacher": [
+        0.57489013671875,
+        0.24944445490837097,
+        0.45486047863960266,
+        0.643370509147644
+      ],
+      "noop": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "mean_gradient_norms": {
+      "depth": 2.6425010561943054,
+      "geom": 0.05778275802731514,
+      "teacher": 0.4806413948535919,
+      "noop": 0.0
+    },
+    "initialization_sha256": "77b82df03d6719e5fddc82c733715c2895fb796bf2765f310b37c8b1503af243",
+    "policy": "Same matched factorial calibration as main backbone; calibrated independently for CF units; no-op shares teacher coefficient because its initial gradient is zero"
+  },
+  "parent_sha256": "6332be4b78f100c9b7444d91f7473c35cdab26080ece4a9d294e23b23c901927",
+  "protocol_sha256": "7a91c5b74d1634b49747531cd02fde55f499fa813c3ff9e01e3ed3a6e8f967d4",
+  "calibration_source_frames": 8,
+  "backbone_batch_forwards": 8,
+  "propagation_batch_forwards": 8,
+  "backbone_frame_views": 16,
+  "propagation_frame_views": 16
+}

@@ -1,0 +1,17 @@
+{
+  "bootstrap": {
+    "type": "paired nonparametric percentile bootstrap",
+    "repetitions": 200000,
+    "seed": 20261022,
+    "DIODE_unit": "scene (n=3)",
+    "ARKitScenes_unit": "venue (n=20)",
+    "training_seeds": "averaged within each physical unit before resampling",
+    "interpretation": "cohort-composition uncertainty conditional on frozen evaluated models"
+  },
+  "source_files": [
+    "or1/tables/paired_units.csv",
+    "or2/summary/scene_regions.csv",
+    "or3/summary/venue_metrics.csv",
+    "or3/summary/venue_regions.csv"
+  ]
+}

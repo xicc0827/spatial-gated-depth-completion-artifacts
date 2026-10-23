@@ -1,0 +1,16 @@
+MVA 复算支撑材料，2026-10-21
+
+这些表来自已保存指标和日志的独立复算，没有重跑推理或训练。
+新增 unseen8 分层、留一及贡献诊断均为事后分析。
+各 CSV 的 change_percent 正数表示 Spatial 更差；delta_m = Spatial − 对照，单位 m。
+RMSE 为平均逐图 RMSE；aggregation=image/scan/scene 表示相应单位等权。
+paired_seeds 中 without_scene00019 是诊断子队列，不能替代主队列。
+signed_influence 固定组为原稿已识别的 scan_00183。
+historical_source_region_checks 的百分数是平均逐图 MSE 差异对 Image Mean 全图 MSE 的归一化贡献，不能解释为 RMSE 降幅。
+validation.json 记录 B 的核验，supporting_validation.json 记录 C 与源域分区的核验。
+旧 OMNI 工件中的证据 D 对应当前稿件的证据 C。
+
+reaggregate.py、supporting_checks.py 是本次使用的分析代码，依赖 numpy、pandas，引用本机来源路径。
+在解压后的 analysis 目录，先运行 reaggregate.py，再运行 supporting_checks.py；结果写入其下 reanalysis 目录。
+ZIP 不包含原始逐条件评分、图像、权重、论文，复算仍需访问这些本机来源。
+详细解释与建议见同目录 MVA内容补强方案与复算结果.md。

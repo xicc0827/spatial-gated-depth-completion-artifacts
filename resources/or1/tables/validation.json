@@ -1,0 +1,1834 @@
+{
+  "source": "${DIODE_FREEZE_ROOT}",
+  "source_plan_sha256": "725e263c2b8727e5698c6b6180e61d74108cf5a72f67a5301fa04354491fb79a",
+  "records": 418000,
+  "images": 304,
+  "sample_sets": 16720,
+  "scenes": 3,
+  "scans": 10,
+  "record_files_verified": 304,
+  "checkpoint_hashes_verified": 25,
+  "checks": "plan/manifest/registry/support hashes; all CSV receipt hashes; full keys; finite nonnegative metrics; metadata; registered checkpoint identity; shared coordinates and pixel counts; direct primary aggregation crosscheck",
+  "scope": "Reaggregation of saved metrics; no pixel-level recomputation, inference, or training. Added diagnostics are post hoc.",
+  "checkpoint_checks": [
+    {
+      "method": "parent",
+      "seed": "parent",
+      "path": "${MODEL_ROOT}\\external_baselines\\official_weights\\NYUv2.pt",
+      "exists": true,
+      "expected_sha256": "6332be4b78f100c9b7444d91f7473c35cdab26080ece4a9d294e23b23c901927",
+      "bytes": 334415907,
+      "sha256": "6332be4b78f100c9b7444d91f7473c35cdab26080ece4a9d294e23b23c901927",
+      "hash_match": true
+    },
+    {
+      "method": "spatial",
+      "seed": 42,
+      "path": "${LOCAL_RESEARCH_ROOT}\\local_gate_screen_20261016\\CompletionFormer_spatial\\latest.pt",
+      "exists": true,
+      "expected_sha256": "7f5c137f4a495e9b9dc78b1e66b98166a3397e64c69dce274a846a4c89a4f72a",
+      "bytes": 314457,
+      "sha256": "7f5c137f4a495e9b9dc78b1e66b98166a3397e64c69dce274a846a4c89a4f72a",
+      "hash_match": true
+    },
+    {
+      "method": "image_mean",
+      "seed": 42,
+      "path": "${LOCAL_RESEARCH_ROOT}\\local_gate_screen_20261016\\CompletionFormer_image_mean\\latest.pt",
+      "exists": true,
+      "expected_sha256": "bb88cd800c35bea25bb6b15641e8585ec2a57cd9bacb5c1bad5482789124d36c",
+      "bytes": 314457,
+      "sha256": "bb88cd800c35bea25bb6b15641e8585ec2a57cd9bacb5c1bad5482789124d36c",
+      "hash_match": true
+    },
+    {
+      "method": "shifted",
+      "seed": 42,
+      "path": "${LOCAL_RESEARCH_ROOT}\\local_gate_screen_20261016\\CompletionFormer_shifted\\latest.pt",
+      "exists": true,
+      "expected_sha256": "c9d43331077864859bb4a62d061047ab27638abcc8c06cbd50d0bc4bc8e0be61",
+      "bytes": 314457,
+      "sha256": "c9d43331077864859bb4a62d061047ab27638abcc8c06cbd50d0bc4bc8e0be61",
+      "hash_match": true
+    },
+    {
+      "method": "task",
+      "seed": 42,
+      "path": "${TRAINING_ROOT}\\completionformer_factorial\\task_seed42\\latest.pt",
+      "exists": true,
+      "expected_sha256": "b9cf48e566a1a0b077cb160eca538f4b2eb48133fcd2ab05402856e7411d8e48",
+      "bytes": 315125,
+      "sha256": "b9cf48e566a1a0b077cb160eca538f4b2eb48133fcd2ab05402856e7411d8e48",
+      "hash_match": true
+    },
+    {
+      "method": "task_noop",
+      "seed": 42,
+      "path": "${TRAINING_ROOT}\\completionformer_factorial\\task_noop_seed42\\latest.pt",
+      "exists": true,
+      "expected_sha256": "af96a6715c481b8f85b7a35f2e9dd7cd5a64fe03468261f9bee8acdb1ecb08a5",
+      "bytes": 315125,
+      "sha256": "af96a6715c481b8f85b7a35f2e9dd7cd5a64fe03468261f9bee8acdb1ecb08a5",
+      "hash_match": true
+    },
+    {
+      "method": "generic_residual",
+      "seed": 42,
+      "path": "${TRAINING_ROOT}\\completionformer_factorial\\generic_residual_seed42\\latest.pt",
+      "exists": true,
+      "expected_sha256": "29515355f052370bda4c14cf906667987baef967eadcb2d06bb1b38c23f8892f",
+      "bytes": 315189,
+      "sha256": "29515355f052370bda4c14cf906667987baef967eadcb2d06bb1b38c23f8892f",
+      "hash_match": true
+    },
+    {
+      "method": "lora",
+      "seed": 42,
+      "path": "${TRAINING_ROOT}\\generic_adaptation\\CompletionFormer\\lora_seed42_lr1e-4\\final.pt",
+      "exists": true,
+      "expected_sha256": "afb47197f411ea0db2ad77f9dc8c9746df121f6afda5c8335ed1fcdc3acdf771",
+      "bytes": 101237,
+      "sha256": "afb47197f411ea0db2ad77f9dc8c9746df121f6afda5c8335ed1fcdc3acdf771",
+      "hash_match": true
+    },
+    {
+      "method": "full_ft",
+      "seed": 42,
+      "path": "${TRAINING_ROOT}\\generic_adaptation\\CompletionFormer\\full_ft_seed42_lr3e-5\\final.pt",
+      "exists": true,
+      "expected_sha256": "3d62227710ff76e94723defad8943db0a095a3287e0f5996952daff0f3288b22",
+      "bytes": 334406731,
+      "sha256": "3d62227710ff76e94723defad8943db0a095a3287e0f5996952daff0f3288b22",
+      "hash_match": true
+    },
+    {
+      "method": "spatial",
+      "seed": 43,
+      "path": "${LOCAL_RESEARCH_ROOT}\\local_gate_replication_20261016\\seed43\\CompletionFormer_spatial\\latest.pt",
+      "exists": true,
+      "expected_sha256": "b4b7c649dfb09aa11b33321acf018a138fa1f36029c59986ed1047c394826e9a",
+      "bytes": 314457,
+      "sha256": "b4b7c649dfb09aa11b33321acf018a138fa1f36029c59986ed1047c394826e9a",
+      "hash_match": true
+    },
+    {
+      "method": "image_mean",
+      "seed": 43,
+      "path": "${LOCAL_RESEARCH_ROOT}\\local_gate_replication_20261016\\seed43\\CompletionFormer_image_mean\\latest.pt",
+      "exists": true,
+      "expected_sha256": "8527b8501732a31db99051aa0724a1afeec6393f1ade2e755936e307449368d7",
+      "bytes": 314457,
+      "sha256": "8527b8501732a31db99051aa0724a1afeec6393f1ade2e755936e307449368d7",
+      "hash_match": true
+    },
+    {
+      "method": "shifted",
+      "seed": 43,
+      "path": "${LOCAL_RESEARCH_ROOT}\\local_gate_replication_20261016\\seed43\\CompletionFormer_shifted\\latest.pt",
+      "exists": true,
+      "expected_sha256": "8c1d4bc44d29c55c3410f62b2a89cf07128837df5e013ae23ae57be4ae2ec9c0",
+      "bytes": 314457,
+      "sha256": "8c1d4bc44d29c55c3410f62b2a89cf07128837df5e013ae23ae57be4ae2ec9c0",
+      "hash_match": true
+    },
+    {
+      "method": "task",
+      "seed": 43,
+      "path": "${TRAINING_ROOT}\\completionformer_factorial\\task_seed43\\latest.pt",
+      "exists": true,
+      "expected_sha256": "fa1c322330a7d5ee97470b99c4cd910f2504f21ad5e767f9cbb5c19b2e956291",
+      "bytes": 315125,
+      "sha256": "fa1c322330a7d5ee97470b99c4cd910f2504f21ad5e767f9cbb5c19b2e956291",
+      "hash_match": true
+    },
+    {
+      "method": "task_noop",
+      "seed": 43,
+      "path": "${TRAINING_ROOT}\\completionformer_factorial\\task_noop_seed43\\latest.pt",
+      "exists": true,
+      "expected_sha256": "8b1c78fbd89bbede194220e30e1b7215a288bd3bdbce42cce8929683d056d054",
+      "bytes": 315125,
+      "sha256": "8b1c78fbd89bbede194220e30e1b7215a288bd3bdbce42cce8929683d056d054",
+      "hash_match": true
+    },
+    {
+      "method": "generic_residual",
+      "seed": 43,
+      "path": "${TRAINING_ROOT}\\completionformer_factorial\\generic_residual_seed43\\latest.pt",
+      "exists": true,
+      "expected_sha256": "0e43d8d7024c55c488254ab7a318efaea5692b78fd92d93b5afa98662174f53d",
+      "bytes": 315189,
+      "sha256": "0e43d8d7024c55c488254ab7a318efaea5692b78fd92d93b5afa98662174f53d",
+      "hash_match": true
+    },
+    {
+      "method": "lora",
+      "seed": 43,
+      "path": "${TRAINING_ROOT}\\generic_adaptation\\CompletionFormer\\lora_seed43_lr1e-4\\final.pt",
+      "exists": true,
+      "expected_sha256": "8abb9ff80494e9d2018fef77f370f061d9bb13d9a2a73d6a91019c1efbc785f3",
+      "bytes": 101237,
+      "sha256": "8abb9ff80494e9d2018fef77f370f061d9bb13d9a2a73d6a91019c1efbc785f3",
+      "hash_match": true
+    },
+    {
+      "method": "full_ft",
+      "seed": 43,
+      "path": "${TRAINING_ROOT}\\generic_adaptation\\CompletionFormer\\full_ft_seed43_lr3e-5\\final.pt",
+      "exists": true,
+      "expected_sha256": "69b705380bc7152e1291b6cee32b6ae08e507dad1cffdeb4816018b0cd6708bd",
+      "bytes": 334406731,
+      "sha256": "69b705380bc7152e1291b6cee32b6ae08e507dad1cffdeb4816018b0cd6708bd",
+      "hash_match": true
+    },
+    {
+      "method": "spatial",
+      "seed": 44,
+      "path": "${LOCAL_RESEARCH_ROOT}\\local_gate_replication_20261016\\seed44\\CompletionFormer_spatial\\latest.pt",
+      "exists": true,
+      "expected_sha256": "cf3ca14d98f89925e50c85186b40e43730a7a43fcc7b36b1f622366a4f5380e6",
+      "bytes": 314457,
+      "sha256": "cf3ca14d98f89925e50c85186b40e43730a7a43fcc7b36b1f622366a4f5380e6",
+      "hash_match": true
+    },
+    {
+      "method": "image_mean",
+      "seed": 44,
+      "path": "${LOCAL_RESEARCH_ROOT}\\local_gate_replication_20261016\\seed44\\CompletionFormer_image_mean\\latest.pt",
+      "exists": true,
+      "expected_sha256": "ad963c883a31eca6fb0a72ae2702967a73a5d905d664a06df23304602c182707",
+      "bytes": 314457,
+      "sha256": "ad963c883a31eca6fb0a72ae2702967a73a5d905d664a06df23304602c182707",
+      "hash_match": true
+    },
+    {
+      "method": "shifted",
+      "seed": 44,
+      "path": "${LOCAL_RESEARCH_ROOT}\\local_gate_replication_20261016\\seed44\\CompletionFormer_shifted\\latest.pt",
+      "exists": true,
+      "expected_sha256": "d0a57eb2c07b950ea9f9df6d417cbde5756dcb1327478bc50d752bcc93dd8e7d",
+      "bytes": 314457,
+      "sha256": "d0a57eb2c07b950ea9f9df6d417cbde5756dcb1327478bc50d752bcc93dd8e7d",
+      "hash_match": true
+    },
+    {
+      "method": "task",
+      "seed": 44,
+      "path": "${TRAINING_ROOT}\\completionformer_factorial\\task_seed44\\latest.pt",
+      "exists": true,
+      "expected_sha256": "3f3bbe3889aac70fab5cd1694af9cc0b16a5508b9ad2f950ee2f185fdae74bc0",
+      "bytes": 315125,
+      "sha256": "3f3bbe3889aac70fab5cd1694af9cc0b16a5508b9ad2f950ee2f185fdae74bc0",
+      "hash_match": true
+    },
+    {
+      "method": "task_noop",
+      "seed": 44,
+      "path": "${TRAINING_ROOT}\\completionformer_factorial\\task_noop_seed44\\latest.pt",
+      "exists": true,
+      "expected_sha256": "33b24b7407b8a2ae4b44ce39e60596e5a8786f5ad7d27dbb6f514b44cc97a356",
+      "bytes": 315125,
+      "sha256": "33b24b7407b8a2ae4b44ce39e60596e5a8786f5ad7d27dbb6f514b44cc97a356",
+      "hash_match": true
+    },
+    {
+      "method": "generic_residual",
+      "seed": 44,
+      "path": "${TRAINING_ROOT}\\completionformer_factorial\\generic_residual_seed44\\latest.pt",
+      "exists": true,
+      "expected_sha256": "521eb7311a6fcdc228ee2f9f3f2a48a0026c0555999a7d6d207284d251f0e524",
+      "bytes": 315189,
+      "sha256": "521eb7311a6fcdc228ee2f9f3f2a48a0026c0555999a7d6d207284d251f0e524",
+      "hash_match": true
+    },
+    {
+      "method": "lora",
+      "seed": 44,
+      "path": "${TRAINING_ROOT}\\generic_adaptation\\CompletionFormer\\lora_seed44_lr1e-4\\final.pt",
+      "exists": true,
+      "expected_sha256": "2ad1b316d8eb39a3a84f1b9a733dbe1fedd47959f4c8e68072238c47e7d1ffe6",
+      "bytes": 101237,
+      "sha256": "2ad1b316d8eb39a3a84f1b9a733dbe1fedd47959f4c8e68072238c47e7d1ffe6",
+      "hash_match": true
+    },
+    {
+      "method": "full_ft",
+      "seed": 44,
+      "path": "${TRAINING_ROOT}\\generic_adaptation\\CompletionFormer\\full_ft_seed44_lr3e-5\\final.pt",
+      "exists": true,
+      "expected_sha256": "c3c3cdf8b3fab1cd5988c71eebe14a9472053033cabc0df435318a4cf2b12799",
+      "bytes": 334406731,
+      "sha256": "c3c3cdf8b3fab1cd5988c71eebe14a9472053033cabc0df435318a4cf2b12799",
+      "hash_match": true
+    }
+  ],
+  "input_files": [
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0000.csv",
+      "sha256": "866f65af6f450d396c1227f74b208420a48d546ec649fb38e54ced57ff7106a3",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0001.csv",
+      "sha256": "ca4d467b6d8ac349e4e2ad5ff6aa86ca604ecb8ebc94f1b47d6515a5c86f1628",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0002.csv",
+      "sha256": "9547922da036fde472b79890d35f33d8f1b1891413c07cd243236951fdb07f14",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0003.csv",
+      "sha256": "df68be4b05213af44657f0ac9bbf4c161c214e4022e73c9633bbef4290892ff3",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0004.csv",
+      "sha256": "736491b2b038a32f878bdd6ab3b334b0f4d8df107dacf8c9a59425070054ba78",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0005.csv",
+      "sha256": "efa4adb6bba56cddb8b1a37e89008b247de45600e8bc7d9881dab369a566acae",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0006.csv",
+      "sha256": "a0ad5448540fc520d9b4afa56ef28be274ac1aa2f26f8597b8a6b346c737b5f5",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0007.csv",
+      "sha256": "523d5a2c412a8afd1c0f1ec7c92601ea925d3a997df74d277e2580e0c30b125e",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0008.csv",
+      "sha256": "873d74ec4a6eb77cc36040c8317b0312e8990b4b92e2c456f32ab60f4bf205c6",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0009.csv",
+      "sha256": "d6ac2c5447b6797494adb14368566938739b0edd76463d0911ef8939034e585d",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0010.csv",
+      "sha256": "b743178e194364b5770796616dafcdf31a9fd2e3dad6bf8c11e9ba81f74c48cb",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0011.csv",
+      "sha256": "56d52e54fa186d6cd0c0b75d44d24642160b89c2793b9891236d56b59ab3611d",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0012.csv",
+      "sha256": "7471a91bb9d9e1b8a2a69a684faa43f91654d42fdc0cb03ad44c115b6273ebcc",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0013.csv",
+      "sha256": "e5578b2306dbd0b758dc057ae1968c14dd6739af41af7797f0b16d7b6dc24e61",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0014.csv",
+      "sha256": "e1bef360dfcd20e7a97f60c57cfb4dd29d7318037ad320417184080b38a82144",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0015.csv",
+      "sha256": "e6a9e9b2fbca9d2c28836db5451c57e97cc2f0ce1084a25aea52870f7ea5a2aa",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0016.csv",
+      "sha256": "d70b16ebdcba3e1466ca90f7eea236959f4e8567fe62767257c0e61bf9400c1d",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0017.csv",
+      "sha256": "59dc4f7baaa181211df3c6b9fe990e02bd1afdb8b0b83f722d65ca1e588e9897",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0018.csv",
+      "sha256": "0e86f458d3efe87158679b4f20516442c01aef06c211ef93dbf3e992e8996999",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0019.csv",
+      "sha256": "74f8738a4367ae63670663927f4313946356acccbd3e1077507bd5430df568a7",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0020.csv",
+      "sha256": "9ba84f063cdd5e96cff9691602ff04eff84d1b2b603960cd83f8a0bc5687928a",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0021.csv",
+      "sha256": "3a91d6c91b3078f52d5518800a94fd81bd08762a63919039ac00ee971e9e5cb7",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0022.csv",
+      "sha256": "0947d6d1f61ef65af0a26add676715a73b0c0f60599ac4411742c7a60437918e",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0023.csv",
+      "sha256": "d575c2f4ae424d655c2d19aa8a4fd878e6136ab1962c2153b72eaa14c7371cd7",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0024.csv",
+      "sha256": "3f130bce49f7173120427dd921aa37063a1c10ec25f32d83a92b8412e89e6654",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0025.csv",
+      "sha256": "a932d29088901a312e73c4d7ce16d4856bceee136b510c470f5b4f16c72e79e3",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0026.csv",
+      "sha256": "18a6dd7209b78568a078884663e4fd36fcff180f5a343d5a6f33cff3d4069100",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0027.csv",
+      "sha256": "61b520004e77a76c697c74a880e1dd05d2d9d08bb471e8ae0a1db02eaa9a85e2",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0028.csv",
+      "sha256": "55da470536c7fd9fe40c5cbaa263cbf68ab083f0935ac5803274b2e12885c100",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0029.csv",
+      "sha256": "b26a8456934410a3b784e07cae303a90b98910abc7004043f9caf16ffd35c844",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0030.csv",
+      "sha256": "0d7540344cd2701c1a938da4f61cb95996ee1ebca1b6f949092b8c275b72a94d",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0031.csv",
+      "sha256": "c602b579a602fc37d145178ca6a62dd7b44cf47bd3a7c0cb5903afa113ed8983",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0032.csv",
+      "sha256": "ebd8433e5edb3f3796b5b5006adb7444fd7a23f29ae1d59b7d315701faedd672",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0033.csv",
+      "sha256": "926be464f4bd7e1986e27de2aedada3e85e052ae55949cbdaba150c7e788e12c",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0034.csv",
+      "sha256": "4b9d57e374741454c6daf2963081124cf09960c01edf673539dd4ab73788bd2b",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0035.csv",
+      "sha256": "7147ba1f0a470e41df2fb9dc93f3ea6024740ee43d1334144cf79f93c62b1d43",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0036.csv",
+      "sha256": "4c76dff45c97613a4dcb2bd883f4876006becf0954237285a67a61479d201f1e",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0037.csv",
+      "sha256": "30ba7cab302806a0c33d0a2fe258f7aa5067a634499940de12a4965ffcc71830",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0040.csv",
+      "sha256": "a6ed75ba5bb92fc8ef252fa6793dcc8f4fbb63c082464caf3ed82bedb4322bc8",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0043.csv",
+      "sha256": "2b27d8ce12c1bcbff218140e63247f6325912b0c6feff950e2ad8c4fb921b0aa",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0046.csv",
+      "sha256": "f8c729b335f3f316979959b74ba97086899648feb32633655c97468dad0e24d3",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0048.csv",
+      "sha256": "6ef88e7e08235d1c112e8f7d7c8fafbc763c3be03554e7df8a623358e8f521b3",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0051.csv",
+      "sha256": "368634ef7355acbd82da2aa1bc76fd77e30bec2f96d7bfe609e0115fbb1eca64",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0055.csv",
+      "sha256": "80450883581ddc96bbba93686aa552834c02f930866d4de3b972f19320061dcb",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0057.csv",
+      "sha256": "22ab3afe0b409b033ab9caf4a0d5f27725f852e2a14fb39b11c42a0fa1e1b825",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0060.csv",
+      "sha256": "dfdc101aa7cb0f501792943510b3907abbeeeed2cea3913f4f6ca460f17f111d",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0063.csv",
+      "sha256": "1489d92bc75b9d89c31702efde240de69538f3ad687557140ccf9131e16137a0",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0065.csv",
+      "sha256": "835721d22d43864543349c4c4122db60a5429624f431e35b421f22308bf8f5e2",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0068.csv",
+      "sha256": "ea33532e78e8670eb8b17c63b35ce70a838ae535ab5baa5ac2a71ae1fbadc6d9",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0070.csv",
+      "sha256": "2766199b966343bf6d10459d6a13b113274a6d007546eaafef1a9ea1625dbe37",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0071.csv",
+      "sha256": "5e838a3a6bc4c55bce0ab9573407e1646b4fa01e2a84d5a8310cb294bd42227b",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0072.csv",
+      "sha256": "49880d99ba0bfa4bd192afda6393918168def64f265f63a8891e6411137bf112",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0073.csv",
+      "sha256": "579a8c52f50f11d49d2b98a88c31b6cb924841585bc5e4452b827654070c81fc",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0074.csv",
+      "sha256": "d0790d930b0130e3354e48478af3aae4c614c843f00cd712501a9838f90b3ce0",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0075.csv",
+      "sha256": "77d6d13493738401638e3f4cf0ecc5528c1145621b337c53a122ef7947c4e497",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0076.csv",
+      "sha256": "4ae4ec8840f6919d567b575dc559418ee7704a9a28f8f73afcb700773621f270",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0077.csv",
+      "sha256": "41d517144c6db8e7e3694013f192556ec83c918c6a310c30dc7004d67652870b",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0078.csv",
+      "sha256": "062e8c5ab89603af9770ed25100041bf8b5aa78a0c2acd1a03018c8e13a8326e",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0079.csv",
+      "sha256": "01cd85064ddcda10f29315c142f5d8955477118ecc0fdab8bb51719b04a25a4b",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0080.csv",
+      "sha256": "74d01f5b0599212528c3343574903f8753ac489c504da7696e318733e19ff744",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0081.csv",
+      "sha256": "59876612c76aa0c66f96321bcac8effa9782805fa30fcb0a3c97f4408e54f826",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0082.csv",
+      "sha256": "9fcbb5304d5cbee29f8475bcd840085caf8c467c2e8218213cdfc67465dacc3f",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0083.csv",
+      "sha256": "96a2a1cb0c70e9ae4319218a0009cfdd6aec5f7b410ecab65f4252e6ba7613c0",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0084.csv",
+      "sha256": "b06b305470a53c12a0df962d8aae8de7dbc4cd31d6a61cb6b0bd624040c3f511",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0085.csv",
+      "sha256": "3833c5ce537f15f3703e2c51195bf9ab584518bf9479e094580c1c0ea21785c4",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0086.csv",
+      "sha256": "9f2389deacd248fb474a4876d24b63f9b7dd6311b9bd2a6a3f41ef8af85e8106",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0087.csv",
+      "sha256": "816875df263929d6c9366a3263fbf0ffab16dc61a6a9f81a6e6b442104b024e6",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0088.csv",
+      "sha256": "e76c04809e3b10e3a65d747df734a8b42e367ae511d95108ac24df367a330570",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0089.csv",
+      "sha256": "4915961a65c1fd117caa51ab87cc90c0692fa920f29a109674c04afd4325e05f",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0090.csv",
+      "sha256": "5117152f8c7ecf781b13769e3c47faaba8781d1464465998c9be317d29cd94dd",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0091.csv",
+      "sha256": "f127b076922512862543df04befbce2d317f4c49bfe6cba748d2beababd45913",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0092.csv",
+      "sha256": "961847341986273d9c19ff69f5dde430ef21d8f9ced84761826543ab976e9135",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0093.csv",
+      "sha256": "a3ddcc69492c6f53354b5ab639e020947682597ab31d34c8a91e8954da870dd2",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0094.csv",
+      "sha256": "6865116ba6d182c7cb608132af41d44d5fa5584a228aa08ac4242d0972b1edcf",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0095.csv",
+      "sha256": "53cbeac2998929a5f578eb5b8fce94787d9cdd32cdd578da38c94a88474bdc59",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0096.csv",
+      "sha256": "5e3663db70e079ed1ebd8659e2b1e54cbdec08a9daa19f17fc636a6b9b9ab1b9",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0097.csv",
+      "sha256": "5fbf9c5d48822863d085e81f436734ac455b77c34924c7a66bbb2def671f3177",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0098.csv",
+      "sha256": "a8ada9988d6e7f60e84e9c6c0826c369f5c614c8dbdfdc3d1686095e2348dfe0",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0099.csv",
+      "sha256": "6d500ba89f19cbd429c0d6ca496aaabf688c3d6dd954c6fe17fd46e3ada2323c",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0100.csv",
+      "sha256": "64b8595ddb90aa4e0602ab3133fb2b534e1b65a5ed7bbd6868cb28ab606537c9",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0101.csv",
+      "sha256": "96232a0773be21492caa43010c15f5b1536a4321b77bb883a240513b28bcd3f9",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0102.csv",
+      "sha256": "22a803c832cf0547305bb9ea75e5c958ced5f428feaacb7a5fc171892ef658f0",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0103.csv",
+      "sha256": "f1fc4b08b299b5802f96edca565e658653de323266afa6dea5dfeb3da216e379",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0104.csv",
+      "sha256": "4732946f7b0fc828ba5688941b6c71c86e03cc853bfb96f381b361a1ff1223bf",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0105.csv",
+      "sha256": "e2bc4837db16e18bf13b40cc04bf488e57ee5b7b61bcd53d85eae422b9baef65",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0106.csv",
+      "sha256": "491a6e80930f7a548d0cf522cc22c4756ba67f8b29f17d56cc21d085a15d3bf8",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0107.csv",
+      "sha256": "7a6ed488451c6361928afd3dc258b97d0d84a4418cf2e9ef8d0fd37772b53a20",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0108.csv",
+      "sha256": "3449bb67b0f84d11a7693175d25de7d441475c2be5457ed5397ccee9af357bc7",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0109.csv",
+      "sha256": "c08c09396aa5c915e8043b62f18da1adbd2f8d9a11e12a6f0b922450bb13dc07",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0110.csv",
+      "sha256": "23dba42f5238c53e72de4867a8bd844c6291d26872310e1256829cdac7aa5c8b",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0111.csv",
+      "sha256": "c1abeeea2f51586bf94b6c3d2bb89e029aee469ccb95bd5cd42e5ba02b1854b2",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0112.csv",
+      "sha256": "669d4a1ada95f43e72834fe4e7532feabb0c0c5ac5a69eac4fc5d122ef16c85e",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0113.csv",
+      "sha256": "85fa7190fde716c4a94ed2d9b970b34c7fda47bfe6b58a0798e0f9f97c97126d",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0114.csv",
+      "sha256": "8518a58d69a742c810d5f591d6da9d6308e85a51a66b9b3bb50b4ac387a7ad2e",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0115.csv",
+      "sha256": "9cf8a05e562a7cf4fde1ef70b62f317b221e2b557d1097a8c14a48dcd567e607",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0116.csv",
+      "sha256": "0ccaefee56e1d6e0afb3bd21bd0ccb50f2d645b3955a222c7a487975b5d9e31b",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0117.csv",
+      "sha256": "510e1da098918c5b3962f4f04f1b6c8dae5ea9eaf23342b71f747489174008e8",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0118.csv",
+      "sha256": "b6c3c05d764bdd020780db08c166fc1b39f646a3c30223e9cf9ebee510cf6b46",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0119.csv",
+      "sha256": "62e05f04b0d977f7a596af884daa53ea452ad67857d523c80363004896b4a23a",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0120.csv",
+      "sha256": "84fea5582d1568836d52dd96350a2ed80976ea01b23e85664de2e7d0fdd4f176",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0121.csv",
+      "sha256": "e3c2804661b776ac446e1c7d8ebcd48b466fb0ddbc7f36d4b58b23b04965782e",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0122.csv",
+      "sha256": "5e6bb3277c529ad87bdbe64d316d5d0e58a2d237fabfc34ee0df1165787795a2",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0123.csv",
+      "sha256": "de6ae6a128d1f883bc7a453e3048b28847c0535cf0f34661279cc3c540477b2e",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0124.csv",
+      "sha256": "f82912774f9b713f3e2052781c9aa0b04e6aba39e51c8122944185f089f20ae5",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0125.csv",
+      "sha256": "5b4b3bd5f5687db46ea9fce94363b930a94a1a8dfced306eb9880ae47f81087d",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0126.csv",
+      "sha256": "9b12f454c0a44c96b5d42ff71b15de5d865384aa9ec9a73a3e9d89a5830fd6a2",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0127.csv",
+      "sha256": "66de7b696560d6a5678f95b89418626e61684c76a54e04bbd9c662e10db6ff41",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0128.csv",
+      "sha256": "28497271516f1f3398b188399c3bf2a3cfd445c7173b7c74b1f0cd2dd7ac767e",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0129.csv",
+      "sha256": "8b5fe2acd2116091866a5111e0d426aab6ba786acf59566e0575485064c864bc",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0130.csv",
+      "sha256": "2b120123b5444a15baa6ea63e61d2a090619e40f6c3285957aa5a9aaf2212579",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0131.csv",
+      "sha256": "e43094cb9b3668665b2935f9b4e4e10e7babdabdf790dd2db6886705628f0d58",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0132.csv",
+      "sha256": "8f825f385a37d3ee97782de2ad3497f9ccf85a35d995bedb26d2a22b9cce2a63",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0133.csv",
+      "sha256": "c04733e4ad499888a50888001babb6027f82c3b99b0639b5f7414b7ff42a5962",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0134.csv",
+      "sha256": "89a57104149248be154c2c1865ac82f9e06f7eb30475dba359856f4dcf90391b",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0135.csv",
+      "sha256": "3636fea488b4de58719c104174a499ce4997578567325675b808ae728cc0a50a",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0136.csv",
+      "sha256": "4c9c3f0d7879ecc2404a017a61591d9c0184c68b439c2b019f64fc2171d3c8ff",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0137.csv",
+      "sha256": "3c163556b1050ceb2e4953181a8bfb8ba0d04c446a0427406cfbaeccb5400270",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0138.csv",
+      "sha256": "7819e5afb6509b1fd4827ce81795b3dc3ac4bed60d2e2395305baaa554339a96",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0139.csv",
+      "sha256": "a96df3090e0ebe5d864bd07e83869221a975b5717f0cc5704a5c600d8d953100",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0140.csv",
+      "sha256": "652de2c74f6a6bfb1654a6fea3e97f93564ab5e856901b237cb6f2e052577c19",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0141.csv",
+      "sha256": "8131763d66d14c26900e425e561adf04b586052b84a1cd21d8be23e63178d278",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0142.csv",
+      "sha256": "8d13a00e2540836eeb8f12844c9f62af84afb64ee4e137f45575d3c28eb1d062",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0143.csv",
+      "sha256": "ba024b1669ad8cbef7f46c2ee7fa5cd149b3f047149af9bf63c8529cd8aba324",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0144.csv",
+      "sha256": "b270477bc4ee2cb7ff24bc9c2431a9c05225e31886ee409bde42804fe20598d1",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0145.csv",
+      "sha256": "67c94ec3f3407cd44307d904473b097bc9abf3e9cdce2a8d7de1b6865ac69788",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0146.csv",
+      "sha256": "f43a5141297df9391bff5b4806bb34dbc40400ce1b97729ad412ca7e3ddd3674",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0147.csv",
+      "sha256": "1966364e89c45b76cdda54ed075d955a416c97fc328d983e1663ab5e0371d162",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0148.csv",
+      "sha256": "cc5b96da545ee5713ad2534ce9c03c7fa96e27dcbd21dee1c67f1298e81c8b2b",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0149.csv",
+      "sha256": "2aaf24dbfd96c4463326e65c3095e3a5dfeece1ce12f1994d1d6949e6cc7aa89",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0150.csv",
+      "sha256": "6b13a8c7c422a91fcef6f31eec224348ceb0aba7dd9fc7c1da1ddcc81a2c9dd8",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0151.csv",
+      "sha256": "798b178d47b37e00c08cbd62202f2366064bf9f98f5b470b31f0ad8061f95892",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0152.csv",
+      "sha256": "e8d82735d17841854314f2cc2085c9a29a8d5bd35e1a8a9a38b0678366f8a9a4",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0153.csv",
+      "sha256": "e484de36607d7a45e19ecad57ffcb6641cfeec6f90c44d3b1a5da7b105d20828",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0154.csv",
+      "sha256": "829ace2b5f41dc28d4e044fc4f20f8c9cb78e4546ababa4dd78303052353623f",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0155.csv",
+      "sha256": "a1c1ecb88378c7964e0391de234d2b7aaba30b8e4ff5f7e478231af0fc04a1ea",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0156.csv",
+      "sha256": "5e039e847b4e6520fa7b849f6f7dae5963814d58337acae962213e576b7b3101",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0157.csv",
+      "sha256": "6a5f35769f2d80c0bb29897671718084171d93be75e8f052a35d04fe5340db91",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0158.csv",
+      "sha256": "34328c7d42b81030996baf503f704f5c5edef066c6c2aa0a895b609bd18374a5",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0159.csv",
+      "sha256": "1562132a0c0b9311312e8ad42d99eb754b6db60b58134868ff2c6f39d9f8f2f4",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0160.csv",
+      "sha256": "1104b850a377d699de2aae63ebbbd100544f78f95bb1f79d8110d74d53c5ba80",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0161.csv",
+      "sha256": "5ecd67e7af4b7637756fa4d17b33d078ea684ce1429259d888e2033eab26d231",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0162.csv",
+      "sha256": "6e7bba50d862c46f2301369839dbe38166ee94a9f00f458a8741234f345e45c3",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0163.csv",
+      "sha256": "741cef1578bba5c2ea884690ed75eb9c46759cfe29fa2bfc94cba47f1d4e4039",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0164.csv",
+      "sha256": "0967847b45c7bc6a164666ff1a3cbcaf89449b946286229763a1e48ceb9d4c74",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0165.csv",
+      "sha256": "4916b51e82d92e74afc506dbc6234c0ded95ce4a56265caa3377058afb2a625a",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0166.csv",
+      "sha256": "b74fd240169d0c1ccdb84fb49d47461f89fac7e3f1f7da46e985657337ffae4e",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0167.csv",
+      "sha256": "c89cdf2b29453a8d8a7f318bafdac16644a71c72c2def771e7592eacc1372a4e",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0168.csv",
+      "sha256": "43f9f97c57b8a7e480c98c777c258b5c712cab41b4ea5beb051cc334c80e6a20",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0169.csv",
+      "sha256": "219667e98eb6dd548ffc188e77f5eb2a75793da471d5e3cfc86f0d7aebc97b1f",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0170.csv",
+      "sha256": "e4463d7141cfe8d10ef0d953978bdfd31dde97901e68a58b44fc5f607c7e8634",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0171.csv",
+      "sha256": "3984be55401e8e949f3a94dd2aabd79497c9a2ded7334933d5a3d3a32736e257",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0172.csv",
+      "sha256": "a73e15e78b850a076b216217cee03007bd350585306706c17ecf6e7b6e6f9742",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0173.csv",
+      "sha256": "20dedf9f4b33cab598680228594fd00d03b990b3f4f77349932bac6f4347ecd5",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0174.csv",
+      "sha256": "a8e1f4fd95171f25c133c85e0ca4cfcd4e7216ea50e5c1a61d4dd1fae77e203b",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0175.csv",
+      "sha256": "75c9ca1d77421a3d528053c373205419de4e5e295012884f4506686608ffa967",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0176.csv",
+      "sha256": "d0916f2a2edac6bcff068f300f3339e6d68d3c9651280fe760c40fcb51557385",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0177.csv",
+      "sha256": "72df2999d3265388835061c5c518e38990c0e833c312a5527a37754279997c3d",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0178.csv",
+      "sha256": "cc63e4e413eac68a9c0e3a20b3af3b90e1f05d74d551ba259796f5e686908f0b",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0179.csv",
+      "sha256": "b2f4b7a3ef47ad3f417f4538c82ca95128c28f39dba094c408db494cf5d0b4c1",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0180.csv",
+      "sha256": "67f4754bd6fe62b0624695bf6b48737371a97eaedce17236c2149a94d9ef375f",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0181.csv",
+      "sha256": "718afcd915586f4156b1961f47caab8527f6117f939385f755e9e24433be90af",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0182.csv",
+      "sha256": "ffd394db5b93d2268c050b3c7630a112e9db71d531225219dec2f92db859bc9b",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0183.csv",
+      "sha256": "973d794238597e2916e9d2197c8dce24e39da9cb33902ba7add509813e466514",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0184.csv",
+      "sha256": "50c41fa124d8a19c61447e263204b9ef4ceb6115fdd72efcb79c428addd64942",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0185.csv",
+      "sha256": "ac268aa38e7dbcfafd65b7b687de2066d679ff5445738f58ba5533c3811c3349",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0186.csv",
+      "sha256": "1cbee1553c151592cd72c6672aeb8713c75347dd4ee828edb2f9d7c0e19e86ad",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0187.csv",
+      "sha256": "5fe42aec09c2160278931f73ae5245722d8ea0391b6cedf8c17a0224e8af73cb",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0188.csv",
+      "sha256": "954ca8de6f958c849535202f2957f2fe1e9f693b53a2394ab7b0ab9f9d746cc1",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0189.csv",
+      "sha256": "114d11439388a9fabadfb72d600cc876d29e148e35f09d0d39b15bad81a44468",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0190.csv",
+      "sha256": "a97b6bbc4c292b81ad21eb0e9488c009b47fc71424c01e7d7766b7f6a40ddb49",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0191.csv",
+      "sha256": "37d8eb6403c6592e2b4ce5e159d0bafd39e0332a97b846becb30514f4346a3dd",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0192.csv",
+      "sha256": "3c10348ed6156c2fa0032dce63108a2d2ffc6212c565b3a0c378aaeaea0f9b81",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0193.csv",
+      "sha256": "a6f6503e7662c5ce32785b9e6d825569382b344596284c4b2eb5018fa7ebcd28",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0194.csv",
+      "sha256": "eaff612c50653e66d07323254358f5cf44195a349ee8a007a9d7a233f049224b",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0195.csv",
+      "sha256": "0483282e91dddaa3a8b1f6c8b3c22d651741b951f08016d8a1569571fc082cdd",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0196.csv",
+      "sha256": "36dc75899c3d5e4964a33c4decd42a3bfeb1df158a76fc12800bc5cf08e4e099",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0197.csv",
+      "sha256": "300187d84ec831aefd30f50d76101dbac4de38c70c9ce8912443cb0257929215",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0198.csv",
+      "sha256": "eecede3e73acf6b885befbf5fa1df02667e2775d92f19c07e6704b7bd8b7931d",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0199.csv",
+      "sha256": "793daded247d13827626c183716fd7dd435a9bc6f429f133c7f9fe49d3a047b1",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0200.csv",
+      "sha256": "f8651988b3ae7cf2210a508885831b9ff4bbfe743282028113f70456de1f5e07",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0201.csv",
+      "sha256": "3d7ac283bdd6ecbed988ef351960a5e8b62f1fe55a853d45c7eb04ff63d54243",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0202.csv",
+      "sha256": "1409ab3666500bcef2c468a1bf56e7117abfa4c663412d7d338093ddbd4ceb38",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0203.csv",
+      "sha256": "b3df25662afc88885f7b4744bbebcdf9e7e630d0f7f9a58e38484c256b75a3d5",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0204.csv",
+      "sha256": "f53bcd6c15683675afcef52438c5508bfc14a5e59937bf00a89e565fb245220f",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0205.csv",
+      "sha256": "cd2b42c40da7c642681102d908c4b931527fc35aaadca2630f1a1d76bc6cf86a",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0206.csv",
+      "sha256": "4961b788b01de8caea3c7169c955d5ead36e83ef00b052d7bf1e7e8be9eff901",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0207.csv",
+      "sha256": "aa5c1874391f55d7d6c16c91a18dbdc9cc86e3d8c4907e4cfaac0764903ac2f7",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0208.csv",
+      "sha256": "88f4f26829654e479135ae40095ea91632a4a11e03a8a6c69dd00bc8212fee53",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0209.csv",
+      "sha256": "9cd69e503738edd01df83426a0feeb8327886ff590796a764f27e2869777ee85",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0210.csv",
+      "sha256": "2c08c30471569556d508cd8870ee625fcf18acada494a264db7f93003e04a1b4",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0211.csv",
+      "sha256": "2cfbd1b184beca1275bbcdf9ef99200fe6edfd36870d129ab4225f015e1698b7",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0212.csv",
+      "sha256": "b4f8a69a1c624a7a7ea317028de06aca8cff1520422df0527fb2b732515ee64e",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0213.csv",
+      "sha256": "2e71ce63b3c1d14164b0fbc9666b498f79be828b0ef76977c663c8162710284a",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0214.csv",
+      "sha256": "464c1d86d8cc9e34674a77ea9cb07f4d86c5d2e4e370555c24653bf0254dbe08",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0215.csv",
+      "sha256": "303606de45803481ca084bd2020ad4310f16be612597430309fe2e4306583212",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0216.csv",
+      "sha256": "c4392648b5f618525c27eff728b38c8fdb40e07ec61d1c409edcad11af423385",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0217.csv",
+      "sha256": "3b67fb31298ee852cb4ca3789c5d57b750fca7ed6e505a0ca27e295f543b034f",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0218.csv",
+      "sha256": "aba0ab01829560cb8a47e4f8cd7af466c09336d370e2bcf0a96c1ea461f0f440",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0219.csv",
+      "sha256": "92bb6eb99f41732a960eeac7d811c67f2e5d6a2a0e800ddb5fe8b23b8e33ceec",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0220.csv",
+      "sha256": "be0d0b8d606169eca6e31b265f73472a5647280cc327155df809a1284f0ad6af",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0221.csv",
+      "sha256": "1a170ba92be80259ef96bb64f8a288718aa0fed901c8f40339070962ffee9b54",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0222.csv",
+      "sha256": "853d1d2c5d8517138cc775d2d9b19f2859b1c64cbfd8b09339399138221531ca",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0223.csv",
+      "sha256": "8e4eb4ad0815af62fd94652932cb46769aea9b580851f47de87a5f04c89a5fea",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0224.csv",
+      "sha256": "1a181f7310105aebd03c6c57c1ab82b579e77d73dcded8840c7f7b59cdd2bd7f",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0225.csv",
+      "sha256": "98b236138b832b53b72447142eb8d722d396020c30408da91c3d1c897e133830",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0226.csv",
+      "sha256": "35a04fea7af53f8f81c0aba88a3ce5b79f119b6ec0fcdacc7e83e70b8957fd3c",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0227.csv",
+      "sha256": "22a0c8ccd3d3d123409f87dbc44a123f9d2eea113ad148870eede4e4fe051d4e",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0228.csv",
+      "sha256": "11c7cc82bde96fa5d03dcbce3a80baaf0e03bc1e10218fcfb11a9c0d765e1b69",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0229.csv",
+      "sha256": "2d2f4b65fcea502b633baa9809cdaa77b56e8410b7442e2247fe40a9729f574f",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0230.csv",
+      "sha256": "b50489295f86ea6110928204220441385925e993f765d3a5e79e7df811a0b7a4",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0231.csv",
+      "sha256": "19ff86130cc9fca19cd25712243d53271e69ca7c49511d0ce4589bc07492e1dd",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0232.csv",
+      "sha256": "2555213824c11deb72a27c287d6801544d70cef3ac7e346f53853c0092944228",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0233.csv",
+      "sha256": "2e78a0609c37bcf3272c81ead6498defd6c0f49bcc6380cb7dbab628663e8247",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0234.csv",
+      "sha256": "284efc8e3ed6f7b0bfed7beec29b56cb2d83d9cca3bedc3b8706d6d81ac47876",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0235.csv",
+      "sha256": "13a9d366708971cc42982d721ddaaf0f41b95527b8d70849179671b287a9a8d0",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0236.csv",
+      "sha256": "2e5fe120a65dd432fd3686c2379a5f6d4403e3bd35dc1e37a71f7a8a15376cea",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0237.csv",
+      "sha256": "f442d3ab8f22a85872089696343cb7d9991ff86006c38923cb339838dc68558c",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0238.csv",
+      "sha256": "7bfbc24a64e4c7c1a47bc242255e7a81d652e8361c9939fdc499eed4b278bf76",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0239.csv",
+      "sha256": "7732d6fd2e3e24b661bc1981009ae553b1bd7e63e7a148f506b12dfaf61987c1",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0240.csv",
+      "sha256": "328851fa6c035851f219ba1b0e6d92eb38f212cdc95bb136a1c002d9206b3fe8",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0241.csv",
+      "sha256": "0c46fbae3d7ea5abd9a36082ad5c9048d124e93d2b667290c6e1810498c15d93",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0242.csv",
+      "sha256": "e6e81355bd9321bb2befe73af0d2e21777a231208475ef71f459d6a22c653dc4",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0243.csv",
+      "sha256": "c97f0f930f04aecd2f6098e6839e7092035883bfab7abbb0f7a61da3547458ed",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0244.csv",
+      "sha256": "875b193f2f79a707a29142ba960d766df7c7e7290fb513b61363b8a2314415db",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0245.csv",
+      "sha256": "2d5d6311af0ec32cb4cc356073b2ebc69084c6311d912e9b033c0295fc407e38",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0246.csv",
+      "sha256": "b34112293377682e6a93e7e8b2344140cf970b7f65b933b033491869c3da18cb",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0247.csv",
+      "sha256": "46d0d30015cd38467bf79d5c4b4eb4fd376741425ef4726402fb358a3ea5709f",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0248.csv",
+      "sha256": "a6b025a83d202d2a416ff5b156754b67228b6edcce97b47efbcbf493d818a071",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0249.csv",
+      "sha256": "aec747220c3f571e4903d8b569405b4d5762f122f0c220d2a265dbdea6b81879",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0250.csv",
+      "sha256": "d8badbc0877621c21ef6d67034ff2ae0e16b2812a29dec5cb51fa92de2675590",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0251.csv",
+      "sha256": "ac1fb1769d69c3b1102be1f29b30d310bda8fc2b360f8feea0b2f50f3b0cbfc8",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0252.csv",
+      "sha256": "f2e7cb9a8c312e984d7d61ecc50c9cd3f14ee357bcad01945c33fcbfd7b4b1a8",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0253.csv",
+      "sha256": "a0390fedf546bfb13f217bbc47a63be256b20ca7c8d2d4a65cd4415b3ea074e8",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0254.csv",
+      "sha256": "ce266a9863b32e13d9208ff3fda2df5d3434ec360342f05571c52c564588abd0",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0255.csv",
+      "sha256": "7190f55945401084554c07ecb7e11f35c2a8ec78ce6a0b33a42fde375e5b5514",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0256.csv",
+      "sha256": "8972733e83983e4da1aa4210b44022dba099a636e9e98cf05a5bd0956a161b63",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0257.csv",
+      "sha256": "ebb927b78e7ff701882e3ff47d168c299dbfff2198b2b0d053f07ac4635a1a71",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0258.csv",
+      "sha256": "3b30f388cc0d123e667deaf138b3fdb70b6068d6dfc301b7b0adc7d7e814e104",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0259.csv",
+      "sha256": "d0db686cfef2fd743618af4b651d7dc5563bbb64265fe8d057f04e8a955310d9",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0260.csv",
+      "sha256": "984118f2988aa466be9d53e430ee14f511344073501d0cf1a3731b81a683c9f2",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0261.csv",
+      "sha256": "39974e73a6ec3bf2e17a5143650b6744704a97504d55ad439938e77f243447d3",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0262.csv",
+      "sha256": "1be6919d4b329afaa169123d634b643c381db18be25fab2b0a924caef2aeba67",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0263.csv",
+      "sha256": "8a026b6d49207608f39bad4f383ad74f050778808e37b4dfad5a43511ea848b7",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0264.csv",
+      "sha256": "7076838883f937fc4618a438f5e5364a9afce11f9ba8a4b5e60e94a915604a9d",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0265.csv",
+      "sha256": "68662c9c0f7ae65086c42c5e8ff2025414a9e9ffd0499080e419478a649cf06b",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0266.csv",
+      "sha256": "61a31667e3596e850e14365063f2df92dfb268a53ec7f326c1b3d53e8561b037",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0267.csv",
+      "sha256": "494a8f0c67beaf3d5998b9b641d18c170094fd0997463c13ebc9bc2ce675cd21",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0268.csv",
+      "sha256": "743eddb2e3e56cb7486663d28472213db584f71d1bc28c4ea09c274c4d9d9c1b",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0269.csv",
+      "sha256": "ee5140f0b19e890783b1cf6825a390a68dc52e4342f9b29ed427c18595d61baa",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0270.csv",
+      "sha256": "e7920368dd00d57647532f1ea853c993f3b1e06eb7f195ba06cf0722440fcfa2",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0271.csv",
+      "sha256": "29080490b0201693e714da4c12e8267589b60086eec056f2d759d4b842db424b",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0272.csv",
+      "sha256": "6d0bbe64e5b0e369f1b1bd615a1ad50e3f9e3da4e3288e6f214a7b34579e946d",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0273.csv",
+      "sha256": "1c38ca3f1e1433d1123e1091ac2ace467f55bd0233a44280b0c9479235fb7afd",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0274.csv",
+      "sha256": "f847d3d5112ee89f362582d30b799f70429519c8da06e609412f605cbfb03bfb",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0275.csv",
+      "sha256": "6151466f647303aa1717ee318a3fd605fd666d43d65488e62964501ee969251f",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0276.csv",
+      "sha256": "0e090a1a89bb80e001dd3e3f6c9e18d83659d1cd1cf77c1654496e1faaa942b8",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0277.csv",
+      "sha256": "d38599e32f7d4754dbf8180572813136b78079ff6c47230dfba387eff468e96a",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0278.csv",
+      "sha256": "11bcd83ca488c9610ee0ae24bc3883aa7fb79e85f1c59e937831f2195e1b3fcf",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0279.csv",
+      "sha256": "e270c1d169a5b8cf9822751fb0b0c61bfd410b913775391f5f872635ae33c062",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0280.csv",
+      "sha256": "5f190eb36526973dc0f8d9e90f43a4c8c1ed82da3ca2aa351320ede692604026",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0281.csv",
+      "sha256": "64c8dbaa5ce7a0dfae1fa17e69ffe01a9b5754c1e08bd5333e988e8fe8c48166",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0282.csv",
+      "sha256": "60d93523fb8c22fca329f24f79ddf761173815778b41bf3c30b5f8bda10de317",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0283.csv",
+      "sha256": "d8ba3498bd1d4a33400e1dfda6e7f5f1931304d271dd3c378b2ca20b5dcc5105",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0284.csv",
+      "sha256": "23e025507763fb912b48d0d97191e2b49f5022ddcb3abe6c34c46899f100d5ba",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0285.csv",
+      "sha256": "65d9737c2499cb5278b10c77a62d8b7b49add02b9e88e50b5b595838131716b7",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0286.csv",
+      "sha256": "50bfc193846943bb836cb1a275f9765b942f2672dd4218db31f9b1ffdac8e091",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0287.csv",
+      "sha256": "522743caae3f7b351b63275a3b7b54347ca2ea9ff23922fe9bf57428221b0d9b",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0288.csv",
+      "sha256": "90d2b0ba561be31c214d56631ffda9f7128058636fc7655e7ca1302b277c7c6b",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0289.csv",
+      "sha256": "6873acc0bdcea6576c5ef709697be4f45626a617de743d2d7e25ef7a63010e7e",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0290.csv",
+      "sha256": "996cfc2fdaff7cad94007d2c87e4e47a16fe4afb6a0378cc5ad161d07ad48e23",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0291.csv",
+      "sha256": "a861d1852fc9e770ac8109680ebe26a79a6613ef595fdf6f75257e8172743c54",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0292.csv",
+      "sha256": "7dffd248fbebd7ae0d5282d3df0759253859e406c5d834499a52cc206b67336a",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0293.csv",
+      "sha256": "966646d65bf3b57b10058805e10564ac82ceeb361232d15272bf020633b05a46",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0294.csv",
+      "sha256": "dadd7772f06b13a779dfd79e2805b865b7525bbe44c8451a19b593f24d549424",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0295.csv",
+      "sha256": "db2ef1b178d677e85d5a104d19d581cad70b474f24d7253c4a89dc247c417e0e",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0296.csv",
+      "sha256": "0437e09b872cd754dae76a6950f1840308a13b120ac193474e97a32e898d47d2",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0297.csv",
+      "sha256": "8c80537063430768cf6b17f41017a20f52b36dd7bbe16ef52b76a3eabad463b6",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0298.csv",
+      "sha256": "fbf39da0e060e3be3b9f1c24daec39f01acde9e2d6e6ecdf106cfd1c8fd12737",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0299.csv",
+      "sha256": "2473e37a9981bd96cd09b17148ea5479ab4da5870b940eb91b0acec2d916772b",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0300.csv",
+      "sha256": "009942aa22a9b0068aa5d6fd1a9afb665d86c7f02a08cbdf322ccaa2c96f57eb",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0301.csv",
+      "sha256": "74c619abea2247e7e5621b7e3ef5f4afa372f86bcf290a949471681f78385172",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0302.csv",
+      "sha256": "9a99d9acaa793597909c2ab977c572fbc3b1f188c79e08590ead976c283ebffc",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0303.csv",
+      "sha256": "6f77d400b0993b956371cac7d8ead54598b4da95fe2408b6fae751eead76e56d",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0304.csv",
+      "sha256": "be23442931631744220e620c3561eb84b026baafe549f318308081b37e44725a",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0305.csv",
+      "sha256": "97f54e40c053e9564efd68ece4ed21afaca6016944bdf8d63254212ea1da0a17",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0306.csv",
+      "sha256": "7434c33389fa9b25c8932064731cf7a043a684e0c28928dd34897969fbde01c3",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0307.csv",
+      "sha256": "2eb9b507ef0c7fbfab39c6c541fa61dd876802b3cf2fdf4c972aeba76692d41f",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0308.csv",
+      "sha256": "3683073b86f3821c213e22ec7b4bc263b04ba31448f33b45c129ced8f6d65025",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0309.csv",
+      "sha256": "363c209bbf169fa8fd1b2f4f38f4dcd2e2187182f24c394d259784d04e584d66",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0310.csv",
+      "sha256": "2059d42ff5b37fa245bdd752f40b0838b9224b79cdef2300097a15c937a2783c",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0311.csv",
+      "sha256": "3ab715ad77bf6b27f7211018f471016d957114ae4c80d471e6cf3ca409661745",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0312.csv",
+      "sha256": "3cfe848f8e8a1e05e013886321ada10b869154b48674de0fe3a08d8ed5f10f8f",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0313.csv",
+      "sha256": "811be1dbf9e4b06c3daa59dada7bfe37f3ccf53d7995a313de81fa1a679f2e46",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0314.csv",
+      "sha256": "655891b309f2ca9def04dea9cbd1d42aa411a942c9c23e1fb732bd66f9eefc1c",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0315.csv",
+      "sha256": "5458878af929d9caf94cfef4e7b1d2ce114b98578afb200de9ada082d272079d",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0316.csv",
+      "sha256": "e1d8ba49fbd6fa2a2dfef5cc42da64450167c54113dd9785318a45a505ebe2a8",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0317.csv",
+      "sha256": "99f2d2b3496f0e73d647ec5ea4e8caaec55cd23d1dd17fd44559fa8bb4c7f876",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0318.csv",
+      "sha256": "d54dc0421cc6dfae92077fdc567ba4be03cda8b55dd42358e80c992800025fd6",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0319.csv",
+      "sha256": "21ea7eb89796539792cf5ee2331ffccd58a558ed70f65148ed21194d683a2322",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0320.csv",
+      "sha256": "237cd8e3d1a83abb99f05a9c78393b7cdb5f61000514725783040c919f9172b5",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0321.csv",
+      "sha256": "4c35d7e974db98b328c872b9b3b01b96ebad313e032994522f54b73ce298eeab",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0322.csv",
+      "sha256": "5128d05ada4d3e7dc777c909252f14a870227ed38fae8bee79f857adeb1b7e3d",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0323.csv",
+      "sha256": "ad956a47c775c176e40f57b5356dc811b958b9a4c3c692e2d74f3b7895c6f592",
+      "rows": 1375
+    },
+    {
+      "path": "${DIODE_FREEZE_ROOT}\\per_frame\\0324.csv",
+      "sha256": "882a7d34f0fb8379ed9aecd04b73ea879fa064615b86a126e244b30cabdceaf7",
+      "rows": 1375
+    }
+  ],
+  "primary_results": [
+    {
+      "method": "parent",
+      "mean_rmse_m": 1.3067184943486183,
+      "seed_sd_m": null
+    },
+    {
+      "method": "spatial",
+      "mean_rmse_m": 0.9919344664375997,
+      "seed_sd_m": 0.04429686942295885
+    },
+    {
+      "method": "image_mean",
+      "mean_rmse_m": 1.0442030888130702,
+      "seed_sd_m": 0.04065400826861354
+    },
+    {
+      "method": "shifted",
+      "mean_rmse_m": 1.132648186946906,
+      "seed_sd_m": 0.014072950419146817
+    },
+    {
+      "method": "task",
+      "mean_rmse_m": 1.0818131905427737,
+      "seed_sd_m": 0.029472460524177596
+    },
+    {
+      "method": "task_noop",
+      "mean_rmse_m": 1.1138606700087577,
+      "seed_sd_m": 0.04796889555954871
+    },
+    {
+      "method": "generic_residual",
+      "mean_rmse_m": 1.0375082556584514,
+      "seed_sd_m": 0.027254198754137305
+    },
+    {
+      "method": "lora",
+      "mean_rmse_m": 1.1181018111613874,
+      "seed_sd_m": 0.0058566376867363
+    },
+    {
+      "method": "full_ft",
+      "mean_rmse_m": 0.8322533111443432,
+      "seed_sd_m": 0.054534161855595446
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "omni_records": 117040,
+  "omni_source": "${OMNI_RESULTS_ROOT}\\real_records.csv",
+  "omni_records_sha256": "d6e1b8b88dc4a959253b904e3406f124e0ac057c1561503b948cba7db6ccaf96",
+  "omni_checks": "manifest hash, complete grid, finite metrics, paired hashes/masks, 16720 coordinates matched to B; no rerun of pixel errors",
+  "omni_training_logs": [
+    {
+      "method": "spatial",
+      "seed": 42,
+      "raw_updates": 2075,
+      "retained_updates": 2000,
+      "nonzero_gradient_updates": 2000,
+      "gradient_clipped_fraction": 0.0395,
+      "loss_first100": 0.3855092790722847,
+      "loss_last100": 0.37518815010786055,
+      "path": "${OMNI_RESULTS_ROOT}\\training\\spatial_42\\train.jsonl",
+      "sha256": "0dd914293b76d428566beef3d173778c5457f037341660766c48d551d73ceade"
+    },
+    {
+      "method": "spatial",
+      "seed": 43,
+      "raw_updates": 2000,
+      "retained_updates": 2000,
+      "nonzero_gradient_updates": 2000,
+      "gradient_clipped_fraction": 0.0645,
+      "loss_first100": 0.34210505440831185,
+      "loss_last100": 0.3729321803152561,
+      "path": "${OMNI_RESULTS_ROOT}\\training\\spatial_43\\train.jsonl",
+      "sha256": "0e0f3840b2cf5ce1be1fed5505fae03f3801de5cce6a205e4fcf0751acf85edf"
+    },
+    {
+      "method": "spatial",
+      "seed": 44,
+      "raw_updates": 2000,
+      "retained_updates": 2000,
+      "nonzero_gradient_updates": 2000,
+      "gradient_clipped_fraction": 0.0525,
+      "loss_first100": 0.2631891461461782,
+      "loss_last100": 0.25429161451756954,
+      "path": "${OMNI_RESULTS_ROOT}\\training\\spatial_44\\train.jsonl",
+      "sha256": "bbc746f7670125d387419065bf8a13900890f459039f3e72758d55f224550b68"
+    },
+    {
+      "method": "image_mean",
+      "seed": 42,
+      "raw_updates": 2075,
+      "retained_updates": 2000,
+      "nonzero_gradient_updates": 2000,
+      "gradient_clipped_fraction": 0.004,
+      "loss_first100": 0.3859629301726818,
+      "loss_last100": 0.37451388843357564,
+      "path": "${OMNI_RESULTS_ROOT}\\training\\image_mean_42\\train.jsonl",
+      "sha256": "d4b9e5185cd25bdeec5bff42c1575fc99f95b285b19123709aa29d7b35195d2d"
+    },
+    {
+      "method": "image_mean",
+      "seed": 43,
+      "raw_updates": 2000,
+      "retained_updates": 2000,
+      "nonzero_gradient_updates": 2000,
+      "gradient_clipped_fraction": 0.0055,
+      "loss_first100": 0.34224275074899196,
+      "loss_last100": 0.37206344708800315,
+      "path": "${OMNI_RESULTS_ROOT}\\training\\image_mean_43\\train.jsonl",
+      "sha256": "ca6a477581b2d25029afc3dc1710d429ac02ff31a2b3bbb12e43ab5155df3fd9"
+    },
+    {
+      "method": "image_mean",
+      "seed": 44,
+      "raw_updates": 2000,
+      "retained_updates": 2000,
+      "nonzero_gradient_updates": 2000,
+      "gradient_clipped_fraction": 0.0035,
+      "loss_first100": 0.2635265897214413,
+      "loss_last100": 0.25446478590369226,
+      "path": "${OMNI_RESULTS_ROOT}\\training\\image_mean_44\\train.jsonl",
+      "sha256": "9dd85dfc2baaa69c81a91bfc3e2576d773da368f78c23af72c8ea94fc327a901"
+    }
+  ],
+  "source_region_plan": "${LOCAL_RESEARCH_ROOT}\\gate_region_diagnostic_20261016\\plan.json",
+  "source_region_scope": "Used source development only; descriptive diagnostic, no training, no external evaluation, no causal interface claim.",
+  "region_checkpoint_matches_to_B": [
+    {
+      "method": "spatial",
+      "seed": 42,
+      "sha256": "7f5c137f4a495e9b9dc78b1e66b98166a3397e64c69dce274a846a4c89a4f72a"
+    },
+    {
+      "method": "image_mean",
+      "seed": 42,
+      "sha256": "bb88cd800c35bea25bb6b15641e8585ec2a57cd9bacb5c1bad5482789124d36c"
+    },
+    {
+      "method": "shifted",
+      "seed": 42,
+      "sha256": "c9d43331077864859bb4a62d061047ab27638abcc8c06cbd50d0bc4bc8e0be61"
+    },
+    {
+      "method": "spatial",
+      "seed": 43,
+      "sha256": "b4b7c649dfb09aa11b33321acf018a138fa1f36029c59986ed1047c394826e9a"
+    },
+    {
+      "method": "image_mean",
+      "seed": 43,
+      "sha256": "8527b8501732a31db99051aa0724a1afeec6393f1ade2e755936e307449368d7"
+    },
+    {
+      "method": "shifted",
+      "seed": 43,
+      "sha256": "8c1d4bc44d29c55c3410f62b2a89cf07128837df5e013ae23ae57be4ae2ec9c0"
+    },
+    {
+      "method": "spatial",
+      "seed": 44,
+      "sha256": "cf3ca14d98f89925e50c85186b40e43730a7a43fcc7b36b1f622366a4f5380e6"
+    },
+    {
+      "method": "image_mean",
+      "seed": 44,
+      "sha256": "ad963c883a31eca6fb0a72ae2702967a73a5d905d664a06df23304602c182707"
+    },
+    {
+      "method": "shifted",
+      "seed": 44,
+      "sha256": "d0a57eb2c07b950ea9f9df6d417cbde5756dcb1327478bc50d752bcc93dd8e7d"
+    }
+  ],
+  "region_files": [
+    {
+      "path": "${LOCAL_RESEARCH_ROOT}\\gate_region_diagnostic_20261016\\CompletionFormer_seed42\\rows.json",
+      "rows": 28048,
+      "sha256": "982496b08391abdd37e947f8d7f95e0cb4e989b5f989d3a448c212b55e5c08de"
+    },
+    {
+      "path": "${LOCAL_RESEARCH_ROOT}\\gate_region_diagnostic_20261016\\CompletionFormer_seed43\\rows.json",
+      "rows": 28048,
+      "sha256": "d999649162018942f02c719a03cf139233b98883aa7d9ba8acd35db995cdaddd"
+    },
+    {
+      "path": "${LOCAL_RESEARCH_ROOT}\\gate_region_diagnostic_20261016\\CompletionFormer_seed44\\rows.json",
+      "rows": 28048,
+      "sha256": "644425896b5761fd19d609434b4ed2a792f9fed03a3c3aac5c8d7dc01179cdcd"
+    }
+  ],
+  "region_sse_partition_max_abs_error": 2.3283064365386963e-10,
+  "region_scope_limit": "Historical NYUv2 source development. Stored aggregates verified; no reconstruction of masks or per-pixel depth. Cannot replace DIODE mechanism diagnosis or new scenes."
+}

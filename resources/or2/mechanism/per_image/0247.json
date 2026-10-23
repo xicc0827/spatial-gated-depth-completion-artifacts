@@ -1,0 +1,9 @@
+{
+  "plan_sha256": "96b47367e6dbedb2fa1d04378f8937d14acee5a88eeac7340482d78f18042d7d",
+  "sha256": "3b9c8a75d284d4756262fde35714d3f77107a7fce24a7e7e5b95b405c098d30c",
+  "rows": 1200,
+  "replay_max": 0.0,
+  "identity_max": 3.637978807091713e-12,
+  "omitted_pixel_exemplars": [],
+  "omission_reason": "Contains third-party RGB/depth pixels; regenerate from the licensed DIODE source data."
+}

@@ -1,0 +1,21 @@
+{
+  "development_visit": "467176",
+  "evaluation_use": false,
+  "paired_dimensions": [
+    1440,
+    1920
+  ],
+  "depth_unit": "uint16 millimetres converted to metres",
+  "sky_direction": "Up",
+  "valid_fraction": 0.7245787165281625,
+  "gt_quantiles": [
+    0.7950000166893005,
+    0.9639999866485596,
+    1.187999963760376,
+    1.3919999599456787,
+    1.5670000314712524
+  ],
+  "device_reference_median_ratio": 0.981754720211029,
+  "device_reference_median_abs_difference_m": 0.02199995517730713,
+  "note": "Device/reference comparison is preprocessing context, not a performance experiment or exclusion criterion"
+}

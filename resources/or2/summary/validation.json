@@ -1,0 +1,10 @@
+{
+  "images": 304,
+  "rows": 364800,
+  "conditions": 12160,
+  "model_outputs": 85120,
+  "replay_max": 0.0,
+  "identity_max": 4.94765117764473e-10,
+  "plan_sha256": "96b47367e6dbedb2fa1d04378f8937d14acee5a88eeac7340482d78f18042d7d",
+  "scope": "post hoc; averaged per-image MSE component, not mean RMSE; each component normalized by all valid pixels before aggregation"
+}

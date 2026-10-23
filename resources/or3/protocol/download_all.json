@@ -1,0 +1,191 @@
+[
+  {
+    "video_id": "47333440",
+    "visit_id": "467176",
+    "role": "preprocessing_check",
+    "url": "https://docs-assets.developer.apple.com/ml-research/datasets/arkitscenes/v1/upsampling/Validation/47333440.zip",
+    "bytes": 40146313,
+    "sha256": "6e6e660014438b5fe5cbd05c1591e3c2a4bd0695dc3f61c008128f6a8f653ab1",
+    "seconds": 6.9220000000000255
+  },
+  {
+    "video_id": "42898818",
+    "visit_id": "434641",
+    "role": "evaluation",
+    "url": "https://docs-assets.developer.apple.com/ml-research/datasets/arkitscenes/v1/upsampling/Validation/42898818.zip",
+    "bytes": 25506092,
+    "sha256": "32c854ab9c4574cf2f5321f8a83a808b8bb6c280a9afe93a4ba0e70ba4e856a1",
+    "seconds": 8.04700000000048
+  },
+  {
+    "video_id": "42897541",
+    "visit_id": "422826",
+    "role": "evaluation",
+    "url": "https://docs-assets.developer.apple.com/ml-research/datasets/arkitscenes/v1/upsampling/Validation/42897541.zip",
+    "bytes": 61200388,
+    "sha256": "96253aa4c70a070d7ae689f24a872b8e882255ff8d96e69aca4ba2bbb2cf5035",
+    "seconds": 29.29700000000048
+  },
+  {
+    "video_id": "41069021",
+    "visit_id": "381658",
+    "role": "evaluation",
+    "url": "https://docs-assets.developer.apple.com/ml-research/datasets/arkitscenes/v1/upsampling/Validation/41069021.zip",
+    "bytes": 48988544,
+    "sha256": "5d0e3591eb5e982c6f62bd8ba9345fdd2e7025dd10faf35c83a78ebc9e684ca2",
+    "seconds": 17.96900000000005
+  },
+  {
+    "video_id": "42899619",
+    "visit_id": "435368",
+    "role": "evaluation",
+    "url": "https://docs-assets.developer.apple.com/ml-research/datasets/arkitscenes/v1/upsampling/Validation/42899619.zip",
+    "bytes": 12598866,
+    "sha256": "d1eea23036d011b77531fd5ace53a7c5a10397598c37a2f6b126e6baef9e26ec",
+    "seconds": 7.25
+  },
+  {
+    "video_id": "42446038",
+    "visit_id": "422015",
+    "role": "evaluation",
+    "url": "https://docs-assets.developer.apple.com/ml-research/datasets/arkitscenes/v1/upsampling/Validation/42446038.zip",
+    "bytes": 62135474,
+    "sha256": "f4f81df5be9fad772a76512f18aa5f2a5cdd49578fc2a33490d5d2715a6cfc7e",
+    "seconds": 20.842999999999847
+  },
+  {
+    "video_id": "42897501",
+    "visit_id": "422851",
+    "role": "evaluation",
+    "url": "https://docs-assets.developer.apple.com/ml-research/datasets/arkitscenes/v1/upsampling/Validation/42897501.zip",
+    "bytes": 58267933,
+    "sha256": "31b882a498d150c31915274f8059786a0145de3b6eb94331eb41a8bdb0803a7b",
+    "seconds": 35.23399999999947
+  },
+  {
+    "video_id": "45663149",
+    "visit_id": "469021",
+    "role": "evaluation",
+    "url": "https://docs-assets.developer.apple.com/ml-research/datasets/arkitscenes/v1/upsampling/Validation/45663149.zip",
+    "bytes": 36196606,
+    "sha256": "472a92dfddd8b1bc4327744a3ade6525bc520e206be7885d69179183b9c99d54",
+    "seconds": 12.890000000000327
+  },
+  {
+    "video_id": "47333923",
+    "visit_id": "467306",
+    "role": "evaluation",
+    "url": "https://docs-assets.developer.apple.com/ml-research/datasets/arkitscenes/v1/upsampling/Validation/47333923.zip",
+    "bytes": 59338996,
+    "sha256": "d30b947ca42b20148e27e556cff2d19affb743847446262f6c74588c7ffc003f",
+    "seconds": 18.51599999999962
+  },
+  {
+    "video_id": "48018559",
+    "visit_id": "483621",
+    "role": "evaluation",
+    "url": "https://docs-assets.developer.apple.com/ml-research/datasets/arkitscenes/v1/upsampling/Validation/48018559.zip",
+    "bytes": 29351525,
+    "sha256": "c51be2a3811ab63a665c8639457d560f594de990baaeb67661b5419dd3ce45c1",
+    "seconds": 17.25
+  },
+  {
+    "video_id": "47331322",
+    "visit_id": "468286",
+    "role": "evaluation",
+    "url": "https://docs-assets.developer.apple.com/ml-research/datasets/arkitscenes/v1/upsampling/Validation/47331322.zip",
+    "bytes": 47818811,
+    "sha256": "46b08f098a486385c58258f1bb26a6cea4352743e586b69d607b2c153ec8f173",
+    "seconds": 15.734999999999673
+  },
+  {
+    "video_id": "42897561",
+    "visit_id": "422785",
+    "role": "evaluation",
+    "url": "https://docs-assets.developer.apple.com/ml-research/datasets/arkitscenes/v1/upsampling/Validation/42897561.zip",
+    "bytes": 24248968,
+    "sha256": "3b83c917070abfbc257e0b146929a6f9818861ab34d52cffbbeab9e9280ed3fd",
+    "seconds": 5.953000000000429
+  },
+  {
+    "video_id": "47334239",
+    "visit_id": "470101",
+    "role": "evaluation",
+    "url": "https://docs-assets.developer.apple.com/ml-research/datasets/arkitscenes/v1/upsampling/Validation/47334239.zip",
+    "bytes": 45087930,
+    "sha256": "17ecca8701cfd8045d4f671a64fca255e97afe5bfdbc98f417b88f4903883d7b",
+    "seconds": 15.905999999999949
+  },
+  {
+    "video_id": "47333927",
+    "visit_id": "467305",
+    "role": "evaluation",
+    "url": "https://docs-assets.developer.apple.com/ml-research/datasets/arkitscenes/v1/upsampling/Validation/47333927.zip",
+    "bytes": 59416000,
+    "sha256": "a288cb714eb9e9c45be1f19530d3b549d1034148d45394c1908537973ac6d6f5",
+    "seconds": 30.48400000000038
+  },
+  {
+    "video_id": "45663113",
+    "visit_id": "469013",
+    "role": "evaluation",
+    "url": "https://docs-assets.developer.apple.com/ml-research/datasets/arkitscenes/v1/upsampling/Validation/45663113.zip",
+    "bytes": 31649764,
+    "sha256": "ff04352d38b49832eac1ae1e7f41e8fe4ee901b58f6c808105d8bc31ec2fd425",
+    "seconds": 19.67200000000048
+  },
+  {
+    "video_id": "45260898",
+    "visit_id": "466192",
+    "role": "evaluation",
+    "url": "https://docs-assets.developer.apple.com/ml-research/datasets/arkitscenes/v1/upsampling/Validation/45260898.zip",
+    "bytes": 6259999,
+    "sha256": "6fedcef26ea0e19af7450ef1c7948633e73b40bb9cca829d2a6ac9f396576d1a",
+    "seconds": 7.188000000000102
+  },
+  {
+    "video_id": "47204559",
+    "visit_id": "471948",
+    "role": "evaluation",
+    "url": "https://docs-assets.developer.apple.com/ml-research/datasets/arkitscenes/v1/upsampling/Validation/47204559.zip",
+    "bytes": 33228207,
+    "sha256": "b682b47c97070b7afae2500f21b72d4f84a78e1ab03e23de5c9a0e1bf82c498f",
+    "seconds": 9.811999999999898
+  },
+  {
+    "video_id": "47334256",
+    "visit_id": "470098",
+    "role": "evaluation",
+    "url": "https://docs-assets.developer.apple.com/ml-research/datasets/arkitscenes/v1/upsampling/Validation/47334256.zip",
+    "bytes": 20117548,
+    "sha256": "db651175d8e87639176b324a94929330919c132b11afe3cf1802a7e85d7c2cb0",
+    "seconds": 7.57799999999952
+  },
+  {
+    "video_id": "47332885",
+    "visit_id": "469272",
+    "role": "evaluation",
+    "url": "https://docs-assets.developer.apple.com/ml-research/datasets/arkitscenes/v1/upsampling/Validation/47332885.zip",
+    "bytes": 45023417,
+    "sha256": "3e500413ad66ec82aaf88a6113dcf5e66f2b255f19e422d8ed7c46993210d385",
+    "seconds": 20.125
+  },
+  {
+    "video_id": "45663164",
+    "visit_id": "469011",
+    "role": "evaluation",
+    "url": "https://docs-assets.developer.apple.com/ml-research/datasets/arkitscenes/v1/upsampling/Validation/45663164.zip",
+    "bytes": 78606117,
+    "sha256": "b5683deaa0d44af87d4af265ba11a248065fc18f5e3bea8b40bb99abd597ea8b",
+    "seconds": 19.45299999999952
+  },
+  {
+    "video_id": "45260854",
+    "visit_id": "466193",
+    "role": "evaluation",
+    "url": "https://docs-assets.developer.apple.com/ml-research/datasets/arkitscenes/v1/upsampling/Validation/45260854.zip",
+    "bytes": 35438299,
+    "sha256": "874845b545ed4fedfb79fdcf87d0875c66783a014aa7a7a4cd51dbe11c537fe5",
+    "seconds": 18.42200000000048
+  }
+]

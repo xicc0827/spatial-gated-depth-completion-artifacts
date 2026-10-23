@@ -1,0 +1,7 @@
+{
+  "original_file_hashes_verified": 304,
+  "paired_whole_image_mse_checks": 72960,
+  "max_difference_from_original_squared_rmse": 1.4210854715202004e-14,
+  "pixel_exemplars_verified": 10,
+  "max_pixel_decomposition_difference": 7.275957614183426e-11
+}

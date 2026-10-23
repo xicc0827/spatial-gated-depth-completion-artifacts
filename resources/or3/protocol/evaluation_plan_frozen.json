@@ -1,0 +1,104 @@
+{
+  "status": "NEW_TARGET_PROTOCOL_FROZEN_BEFORE_TARGET_PREDICTIONS",
+  "created_unix": 1792569353.0974884,
+  "target": "ARKitScenes upsampling official Validation",
+  "scope": "Frozen CompletionFormer Parent and source-trained gates; new project-local venue cohort",
+  "source_selection_sha256": "b968aaad0c827c678f0e1a58d840ef4bdad630c0abf2147fc9eb546ae5b28fd7",
+  "manifest_sha256": "38f90df514ad6255094b7f588efb2c52597af04c53bb0e05e849c58788b5d491",
+  "support_sha256": "809f9f4a9e82ee5620ff5ee264bacbd7eaa3c4d43f759ca7f26a67eae8fd89e9",
+  "registry_sha256": "ceb0260d4095e4143594ac0c6f3428a2b5291839edfef1143c3e7b3635972cbb",
+  "preprocessing": "Official native orthographic metric GT (uint16 mm to m); sky Up unchanged, Down rotate180 both RGB/GT; bilinear RGB and nearest depth to320x240 then crop228x304. GT finite and0.1<d<=10; invalid0, no inpainting.",
+  "candidate_population": "Validation visits with at least one Up/Down video; select first lexicographic eligible video per visit; 20 evaluation visits, separate1 development visit; see immutable metadata selection",
+  "image_selection": "Up to15 temporally equally spaced paired frames per video, rounded linspace, before GT eligibility; retain intersection all11 layouts >=500 points, no prediction-dependent selection; report all excluded",
+  "population_images": 247,
+  "candidate_images": 247,
+  "venues": 20,
+  "point_count": 500,
+  "laws": [
+    "uniform",
+    "left",
+    "right",
+    "top",
+    "bottom",
+    "center_hole",
+    "diag_main_half",
+    "diag_anti_half",
+    "center_vertical_band",
+    "center_disk",
+    "two_corners"
+  ],
+  "draw_seeds": [
+    130003,
+    230003,
+    330017,
+    430019,
+    530029
+  ],
+  "repetitions": 5,
+  "primary_family": [
+    "top",
+    "bottom",
+    "center_hole",
+    "diag_main_half",
+    "diag_anti_half",
+    "center_vertical_band",
+    "center_disk",
+    "two_corners"
+  ],
+  "secondary_families": {
+    "uniform": [
+      "uniform"
+    ],
+    "seen2": [
+      "left",
+      "right"
+    ]
+  },
+  "models": [
+    "parent",
+    "spatial_seed42",
+    "spatial_seed43",
+    "spatial_seed44",
+    "image_mean_seed42",
+    "image_mean_seed43",
+    "image_mean_seed44"
+  ],
+  "checkpoint_sha256": {
+    "parent": "6332be4b78f100c9b7444d91f7473c35cdab26080ece4a9d294e23b23c901927",
+    "spatial_seed42": "7f5c137f4a495e9b9dc78b1e66b98166a3397e64c69dce274a846a4c89a4f72a",
+    "image_mean_seed42": "bb88cd800c35bea25bb6b15641e8585ec2a57cd9bacb5c1bad5482789124d36c",
+    "spatial_seed43": "b4b7c649dfb09aa11b33321acf018a138fa1f36029c59986ed1047c394826e9a",
+    "image_mean_seed43": "8527b8501732a31db99051aa0724a1afeec6393f1ade2e755936e307449368d7",
+    "spatial_seed44": "cf3ca14d98f89925e50c85186b40e43730a7a43fcc7b36b1f622366a4f5380e6",
+    "image_mean_seed44": "ad963c883a31eca6fb0a72ae2702967a73a5d905d664a06df23304602c182707"
+  },
+  "code_hashes": {
+    "${MVA_PROJECT_ROOT}\\arkit_prepare.py": "d6c56ffca0e35fa42ea54f453fdfda4a9d55911a7839f7feee585baab7eef3b0",
+    "${MVA_PROJECT_ROOT}\\diode_mechanism.py": "e3ffde491d1caebe17401feeccfe41fb94cde7061719880900c2ea14beeb1c66",
+    "${MVA_PROJECT_ROOT}\\arkit_evaluate.py": "105d8a76f3ed4536f89cef5d932a5a931c2f68f1fb618d140bb944e571138c20",
+    "${DIODE_FREEZE_ROOT}\\diode_common.py": "f2f9e197102074bc4de5149a328887c205c61de2bacf1504a349dbe349c3d264",
+    "${TRAINING_ROOT}\\completionformer_factorial_core.py": "cfb1c7b51a70fa122406c8c499fc167f0d7385434bd413986f3437381d17815d",
+    "${LOCAL_RESEARCH_ROOT}\\local_gate_screen_20261016\\run_gate_screen.py": "379c8247f4e1489737da9343aae72e856a6207a19e0302f8b56618be46dc9d10"
+  },
+  "expected_score_rows": 95095,
+  "precision": "FP32; audited CompletionFormer NLSPN6; no target training, calibration, threshold adjustment or depth scale fitting",
+  "outcomes": [
+    "rmse",
+    "mae",
+    "rel",
+    "unobserved_rmse",
+    "unobserved_mae",
+    "unobserved_rel"
+  ],
+  "primary_comparison": "Spatial versus Image Mean on venue-equal mean per-image RMSE in unseen8",
+  "aggregation": "draw/layout mean within image; seed metrics separately and mean; images mean within visit; visits equal. Also image and video equal descriptive effects; one video/visit.",
+  "region_analysis": "unseen8 regions as prior DIODE diagnosis; input separate, near<=1,middle1-2,far>2 in normalized support distance; additive MSE contributions and 2ec+c². Test far-region benefit and near/middle cost by visit, report counterexamples.",
+  "uncertainty": "Report all20 venue paired effects, seed paired effects/sampleSD, win counts. No independent300-image or60-venue claims; no seed×venue pseudoreplication.",
+  "prior_exposure": "Limited scoped local history search found upstream ARKit data loaders/README and a candidate note, no project-local predictions/data among searched roots; cannot prove all upstream pretraining histories. Published Parent labeled NYUv2; v1 local source adaptation NYUv2. Evaluating CompletionFormer only in this new cohort.",
+  "scientific_context": "Protocol fixed after seeing DIODE aggregate and mechanism observations, before any ARKit evaluation predictions; explicit prospective replication of those observations on a new cohort",
+  "software": {
+    "numpy": "2.5.0",
+    "Pillow": "12.2.0"
+  },
+  "target_predictions_started": false
+}

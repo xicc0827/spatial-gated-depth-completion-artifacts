@@ -1,0 +1,81 @@
+{
+  "status": "DIODE_INPUTS_MODELS_AND_STATISTICS_FIXED_BEFORE_TARGET_PREDICTIONS",
+  "created_utc": "2026-10-17T12:03:46.018647+00:00",
+  "models": 25,
+  "registry_sha256": "ceb0260d4095e4143594ac0c6f3428a2b5291839edfef1143c3e7b3635972cbb",
+  "manifest_sha256": "3f4e03c5679b1a7ce819bd60372da584749da45a984354526c1844f94e50a430",
+  "supports_sha256": "40d58572f9eb91628f169a139e7fcb8183e3fdc618c1e7575c912aa4530ab6fd",
+  "source_preflight_sha256": "9cb24ca8ccc8bceab616c53c95c01011c239f2dc54e21c200b506949cae12d29",
+  "code_hashes": {
+    "${DIODE_FREEZE_ROOT}\\diode_common.py": "f2f9e197102074bc4de5149a328887c205c61de2bacf1504a349dbe349c3d264",
+    "${DIODE_FREEZE_ROOT}\\prepare_diode_evaluation.py": "d02f99c7b421ba7157f1831afa6d730e344362b5f5d42c70e8715e97a0ad3610",
+    "${DIODE_FREEZE_ROOT}\\evaluate_diode.py": "91358bba4b23552d9453688dc1966fa10052f91bd249c0af66d9798edb88e8b2",
+    "${DIODE_FREEZE_ROOT}\\analyze_diode.py": "99b36d5aeccff06172d95d453ab5952e08ab10f911d22ccc8028e4c913dbe0ba",
+    "${TRAINING_ROOT}\\convert_eth3d.py": "1ccdbc74668e1663d16486c9994f4fff9b2f2c19410013070a61d10efa3bad04",
+    "${TRAINING_ROOT}\\factorial_core.py": "561eb4d233beb6426801d71c072a08ab38ed101525466804689b78dcb3e68a4d",
+    "${TRAINING_ROOT}\\completionformer_factorial_core.py": "cfb1c7b51a70fa122406c8c499fc167f0d7385434bd413986f3437381d17815d",
+    "${TRAINING_ROOT}\\generic_adaptation_core.py": "daa2de3d5f9005d32642a4d1ecb40a902dd7079034757377bdd2ef4fa6ebb4cc",
+    "${LOCAL_RESEARCH_ROOT}\\local_gate_screen_20261016\\run_gate_screen.py": "379c8247f4e1489737da9343aae72e856a6207a19e0302f8b56618be46dc9d10"
+  },
+  "laws": [
+    "uniform",
+    "left",
+    "right",
+    "top",
+    "bottom",
+    "center_hole",
+    "diag_main_half",
+    "diag_anti_half",
+    "center_vertical_band",
+    "center_disk",
+    "two_corners"
+  ],
+  "repetitions": 5,
+  "count": 500,
+  "primary_images": 304,
+  "total_indoor_images": 325,
+  "scenes": 3,
+  "cases_per_model": 16720,
+  "expected_rows": 418000,
+  "seen_layouts": [
+    "left",
+    "right"
+  ],
+  "unseen_layouts": [
+    "top",
+    "bottom",
+    "center_hole",
+    "diag_main_half",
+    "diag_anti_half",
+    "center_vertical_band",
+    "center_disk",
+    "two_corners"
+  ],
+  "precision": "FP32; existing audited CompletionFormer NLSPN6 implementation; no target updates, scale fitting or upper score clipping",
+  "preprocessing": "Official native DIODE depth values retained without ray/Z conversion; nearest depth and mask, bilinear RGB to320x240 then center crop228x304; native validity mask AND 0.1<depth<=10m. No inpainting.",
+  "geometry_limit": "Official paper describes rectified metric depth from scans but does not explicitly settle ray-distance versus axial convention here. We evaluate official native depth convention, do not claim an independently verified axial-depth equivalence, and do not compute normals.",
+  "primary_population": "Intersection of all 11 layouts with at least500 valid points in each; exclusion fixed from GT/masks only, never predictions",
+  "outcomes": [
+    "rmse",
+    "mae",
+    "rel",
+    "unobserved_rmse",
+    "unobserved_mae",
+    "unobserved_rel"
+  ],
+  "aggregation": "Mean of per-image metrics: draws then equal-layout family, then image weighted and scene equal; three training seeds separately and mean/sample SD. Primary interpretation scene equal.",
+  "comparisons": [
+    "spatial versus image_mean",
+    "spatial versus lora"
+  ],
+  "uncertainty": "Only3 physical scenes: report each scene and each training seed, paired effects and direction counts; no p-values or population-significance claims; no joint independent9-unit claim",
+  "retention": "External DIODE uniform change reported separately from previously used NYUv2 development uniform change; descriptive2% guard plus1%/5% sensitivity. FullFT empirical baseline, not theoretical bound; no recovery-ratio primary outcome.",
+  "decision": "Do not retune or create new modules. Report simple-baseline dominance, spatial-null/negative results, heterogeneity and limited3-scene scope. Positive findings only justify further analysis, not immediate new training.",
+  "data_use_history": "User previously reported no other unused datasets on hand; DIODE newly acquired after this plan. Limited local source-snapshot search found no prior usage; not an exhaustive audit of external parent pretraining.",
+  "software": {
+    "python": "3.12.9",
+    "numpy": "2.5.0",
+    "Pillow": "12.2.0"
+  },
+  "external_predictions_started": false
+}

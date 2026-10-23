@@ -1,0 +1,11 @@
+cohort,family,component,difference_m2,contribution_percent_of_image_mean_mse
+historically_used_NYUv2_development128,uniform,input_points,-3.883266114628704e-06,-0.023915095027442504
+historically_used_NYUv2_development128,uniform,middle,2.9671527088490687e-05,0.18273210462127623
+historically_used_NYUv2_development128,uniform,far,2.1642784104553124e-06,0.013328708958909427
+historically_used_NYUv2_development128,uniform,all,-0.00010746543086859184,-0.6618258742829322
+historically_used_NYUv2_development128,uniform,near_unobserved,-0.00013541797025291152,-0.83397159283569
+historically_used_NYUv2_development128,seen2,input_points,-1.4783880097467107e-05,-0.0027760739791438723
+historically_used_NYUv2_development128,seen2,middle,0.004384235987209224,0.8232590742265897
+historically_used_NYUv2_development128,seen2,far,-0.030283525310625004,-5.6865522486193845
+historically_used_NYUv2_development128,seen2,all,-0.021502186935717926,-4.037618084927563
+historically_used_NYUv2_development128,seen2,near_unobserved,0.004411886267795186,0.8284511634443495
