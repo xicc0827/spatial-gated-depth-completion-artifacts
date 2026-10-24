@@ -7,11 +7,11 @@ This repository contains the frozen evaluation records, protocol files, reaggreg
 - `resources/or1`: DIODE and OMNI-DC frozen-result summaries and audit records.
 - `resources/or2`: DIODE per-image regional diagnostics and aggregate tables.
 - `resources/or3`: ARKitScenes frozen protocol, per-image scores, regional records, and venue summaries.
-- `training_snapshot`: source-domain sampling manifests, loss calibration records, and the compact adapter/core snapshot.
-- `scripts`: portable gate, metric, reaggregation, and integrity-check scripts.
+- `training_snapshot`: source-domain sampling manifests, loss calibration records, the compact adapter/core snapshot, and a machine-readable parameter/update/latency accounting record.
+- `scripts`: portable gate, metric, reaggregation, integrity-check, and repository-manifest scripts.
 - `manifests/checkpoint_hashes.csv`: model identity and SHA-256 values. Model weights are not redistributed.
 - `manifests/or1_sha256.txt`, `or2_sha256.txt`, and `or3_sha256.txt`: file-level integrity records for the three online resources.
-- `figures`: statistics and source code for the three core figures.
+- `figures`: statistics and source code for the three quantitative core figures, plus the machine-readable selection record for the qualitative success/failure figure. Third-party RGB/depth pixels remain excluded.
 
 ## Quick verification
 
@@ -35,4 +35,8 @@ Full inference requires locally acquired datasets and upstream model repositorie
 
 ## License and third-party material
 
-No blanket license is asserted for third-party datasets, upstream models, or their weights. See `THIRD_PARTY_NOTICES.md` and the license files retained with the ARKitScenes and CompletionFormer snapshots. Contact the repository owner before reusing original project code outside scholarly verification.
+Original code, documentation, and derived research artifacts in this repository are released under the MIT License in `LICENSE`. This root license does not relicense third-party datasets, upstream projects, model weights, or the ARKitScenes source snapshot under `resources/or3/source`; those materials remain subject to their original terms. See `THIRD_PARTY_NOTICES.md`, `resources/or3/source/LICENSE`, `training_snapshot/CompletionFormer_LICENSE`, and `training_snapshot/OMNI-DC_LICENSE`.
+
+## Versioned preservation
+
+The existing `v1.0-submission` tag is retained as an immutable record of the first public artifact snapshot. Licensing and post-tag documentation updates will be preserved in a new `v1.0.1-submission` release rather than by moving the existing tag. `ZENODO_RELEASE_CHECKLIST.md` records the remaining metadata and release steps. The repository will display the Zenodo concept DOI and version DOI after the release has been archived; no DOI has been minted yet.

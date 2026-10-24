@@ -1,0 +1,57 @@
+{
+  "artifact": "qualitative_success_failure_figure",
+  "dataset": "DIODE indoor validation cohort",
+  "comparison": "CompletionFormer Spatial versus Image Mean",
+  "selection": {
+    "candidate_pool": "one predesignated first-image exemplar from each of 10 scans",
+    "candidate_count": 10,
+    "sampling_pattern": "top",
+    "sampling_repetition": 0,
+    "training_seeds_checked": [42, 43, 44],
+    "display_seed": 42,
+    "criterion": "largest mean relative MSE improvement and deterioration among candidates with the same Spatial-versus-Image-Mean direction for all three seeds",
+    "used_for_quantitative_analysis": false
+  },
+  "cases": [
+    {
+      "role": "stable_success",
+      "cohort_index": 257,
+      "image_id": "00021_00190_indoors_050_000.png",
+      "source_pixel_cache_sha256": "2ccbf71dcb53f03ee98fc0941a04c41aaa8298a8f42e192b01a6d3e62c74d6d9",
+      "display_seed_42_rmse_m": {
+        "parent": 0.31265484878607436,
+        "image_mean": 0.38345922907608815,
+        "spatial": 0.34559822939837065
+      },
+      "spatial_minus_image_mean_rmse_m_by_seed": {
+        "42": -0.0378609996777175,
+        "43": -0.051027877701189106,
+        "44": -0.0297423382074416
+      },
+      "mean_spatial_vs_image_mean_mse_change_pct": -19.790765026044742
+    },
+    {
+      "role": "stable_failure",
+      "cohort_index": 177,
+      "image_id": "00020_00187_indoors_000_000.png",
+      "source_pixel_cache_sha256": "d055421bd121e7b7c5fa796bf7e7750d75bc8b0f72ed6055ee1a10304f9924e2",
+      "display_seed_42_rmse_m": {
+        "parent": 0.5192787904595124,
+        "image_mean": 0.3154615742290916,
+        "spatial": 0.3457293458934155
+      },
+      "spatial_minus_image_mean_rmse_m_by_seed": {
+        "42": 0.030267771664323873,
+        "43": 0.047598407983798274,
+        "44": 0.017849440949279483
+      },
+      "mean_spatial_vs_image_mean_mse_change_pct": 23.590801440588347
+    }
+  ],
+  "visualization": {
+    "depth_range_m": [0.0, 10.0],
+    "absolute_error_range_m": [0.0, 0.8216660022735596],
+    "absolute_error_upper_bound_rule": "pooled 95th percentile across displayed Parent, Image Mean, and Spatial errors",
+    "raw_third_party_pixels_in_repository": false
+  }
+}

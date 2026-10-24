@@ -1,0 +1,125 @@
+{
+  "status": "derived_resource_accounting_record",
+  "scope": "CompletionFormer comparison used in the manuscript resource table",
+  "retained_training_budget": {
+    "seeds": [42, 43, 44],
+    "updates_per_seed": 2000,
+    "source_frame_exposures_per_seed": 4000,
+    "effective_batch_size": 2
+  },
+  "documented_additional_execution": {
+    "spatial": {
+      "seed42_discarded_and_recomputed_updates": 75,
+      "total_executed_updates_across_three_seeds": 6075
+    },
+    "image_mean": {
+      "seed42_discarded_and_recomputed_updates": 75,
+      "total_executed_updates_across_three_seeds": 6075
+    },
+    "lora": {
+      "learning_rate_search_updates_beyond_retained_trajectories": 4000,
+      "total_executed_updates_across_retained_and_search_runs": 10000
+    },
+    "full_ft": {
+      "learning_rate_search_updates_beyond_retained_trajectories": 4000,
+      "total_executed_updates_across_retained_and_search_runs": 10000
+    }
+  },
+  "learning_rate_selection": {
+    "spatial": {
+      "selected_lr": 0.0001,
+      "extra_2000_update_pilot_runs": 0
+    },
+    "image_mean": {
+      "selected_lr": 0.0001,
+      "extra_2000_update_pilot_runs": 0
+    },
+    "lora": {
+      "pilot_seed": 42,
+      "candidates": [0.00001, 0.00003, 0.0001],
+      "selected_lr": 0.0001,
+      "selected_pilot_reused_as_retained_seed": true,
+      "extra_2000_update_pilot_runs": 2
+    },
+    "full_ft": {
+      "pilot_seed": 42,
+      "candidates": [0.00001, 0.00003, 0.0001],
+      "selected_lr": 0.00003,
+      "selected_pilot_reused_as_retained_seed": true,
+      "extra_2000_update_pilot_runs": 2
+    }
+  },
+  "methods": [
+    {
+      "method": "spatial",
+      "trainable_parameters": 24513,
+      "fraction_of_full_ft_pct": 0.029355014186221058,
+      "parameter_element_updates_per_retained_seed": 49026000,
+      "documented_additional_updates": 75,
+      "cumulative_parameter_updates_documented_execution": 148916475,
+      "diode_unseen8_scene_balanced_rmse_m": 0.9919,
+      "inference_ms_per_image": 40.24
+    },
+    {
+      "method": "image_mean",
+      "trainable_parameters": 24513,
+      "fraction_of_full_ft_pct": 0.029355014186221058,
+      "parameter_element_updates_per_retained_seed": 49026000,
+      "documented_additional_updates": 75,
+      "cumulative_parameter_updates_documented_execution": 148916475,
+      "diode_unseen8_scene_balanced_rmse_m": 1.0442,
+      "inference_ms_per_image": 40.51
+    },
+    {
+      "method": "lora",
+      "trainable_parameters": 24320,
+      "fraction_of_full_ft_pct": 0.029123890956145668,
+      "parameter_element_updates_per_retained_seed": 48640000,
+      "documented_additional_updates": 4000,
+      "cumulative_parameter_updates_documented_execution": 243200000,
+      "diode_unseen8_scene_balanced_rmse_m": 1.1181,
+      "inference_ms_per_image": 37.92
+    },
+    {
+      "method": "full_ft",
+      "trainable_parameters": 83505325,
+      "fraction_of_full_ft_pct": 100.0,
+      "parameter_element_updates_per_retained_seed": 167010650000,
+      "documented_additional_updates": 4000,
+      "cumulative_parameter_updates_documented_execution": 835053250000,
+      "diode_unseen8_scene_balanced_rmse_m": 0.8323,
+      "inference_ms_per_image": 37.68
+    }
+  ],
+  "derived_relations": {
+    "full_ft_to_spatial_trainable_parameter_ratio": 3406.573042875209,
+    "full_ft_to_spatial_cumulative_parameter_update_ratio": 5607.527642592937,
+    "spatial_minus_full_ft_inference_ms_per_image": 2.56,
+    "full_ft_rmse_reduction_relative_to_spatial_pct": 16.10,
+    "fp32_trainable_weight_payload_mb_decimal": {
+      "spatial": 0.098052,
+      "image_mean": 0.098052,
+      "lora": 0.09728,
+      "full_ft": 334.0213
+    }
+  },
+  "interpretation": {
+    "parameter_element_update_definition": "trainable parameter count multiplied by executed updates; cumulative values include the three retained trajectories and the documented restart or learning-rate-search updates",
+    "parameter_element_updates_are_a_coarse_update_volume_proxy": true,
+    "training_wall_clock_measured": false,
+    "parameter_element_updates_are_not_flops": true,
+    "latency_includes": "internal distance transform and associated data transfers",
+    "latency_excludes": "file reading, initial input upload, and learning-rate search",
+    "latency_run_to_run_variability_archived": false,
+    "latency_reporting_scope": "approximate implementation timing; no precise significance claim for pairwise latency differences",
+    "claim_boundary": "compact adaptation-state storage and smaller cumulative trainable-parameter update count; no inference-acceleration claim"
+  },
+  "provenance": {
+    "generic_adaptation_protocol_sha256": "900cbd6973149578983b5a5b78233ef42a254d9f7e8f04e33cbc2abc6e40e739",
+    "full_ft_selected_checkpoint_bytes": 334406731,
+    "lora_selected_checkpoint_bytes": 101237,
+    "spatial_selected_checkpoint_bytes": 314457,
+    "checkpoint_identities": "manifests/checkpoint_hashes.csv",
+    "primary_results": "resources/or1/tables/aggregate_metrics.csv"
+  }
+}
