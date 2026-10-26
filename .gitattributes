@@ -7,3 +7,7 @@
 *.yml text eol=lf
 *.yaml text eol=lf
 *.svg text eol=lf
+
+# Integrity manifests and frozen receipts refer to exact stored bytes.
+# Disable newline conversion for every artifact on all checkout platforms.
+* -text
