@@ -1,0 +1,16 @@
+{
+  "status": "COMPLETE",
+  "dataset": "ARKitScenes",
+  "index": 11,
+  "protocol_sha256": "044a1555c515ac570d59358cbbe12a580fe05fb48a628f519f49a7b1adf6db6f",
+  "converted_sha256": "0fac029d3c7f6c9da7eadff638c90b209d4805512461af737788cc3e169dd553",
+  "archived_source_sha256": "ec0adc1efc81fad030639eec6c26ce71fcaf965cf7fd3c51c6b04175c8bb9951",
+  "result_sha256": "854c5986ddaece6f9e66f31b0bfb1bf3cebe53be46f5ededf5ba64503e350c2a",
+  "rows": 240,
+  "conditions": 240,
+  "checkpoint_sha256": {
+    "42": "7f5c137f4a495e9b9dc78b1e66b98166a3397e64c69dce274a846a4c89a4f72a",
+    "43": "b4b7c649dfb09aa11b33321acf018a138fa1f36029c59986ed1047c394826e9a",
+    "44": "cf3ca14d98f89925e50c85186b40e43730a7a43fcc7b36b1f622366a4f5380e6"
+  }
+}

@@ -1,0 +1,7 @@
+﻿dataset,endpoint,level,n_total,n_spatial_better,n_intervention_better,n_tied,spatial_better_percent,mean_delta_spatial_minus_intervention
+DIODE,rmse,image,304,303,1,0,99.67105263157895,-0.09276837229403045
+DIODE,rmse,scan,10,10,0,0,100.0,-0.08453529155336048
+DIODE,rmse,scene,3,3,0,0,100.0,-0.12226755106883135
+ARKitScenes,rmse,image,247,245,2,0,99.19028340080972,-0.030135881149014276
+ARKitScenes,rmse,scan,20,20,0,0,100.0,-0.030463634406043015
+ARKitScenes,rmse,site,20,20,0,0,100.0,-0.030463634406043015

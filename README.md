@@ -1,12 +1,13 @@
 # Spatial-gated depth-completion adaptation: reproducibility artifacts
 
-This repository contains the frozen evaluation records, protocol files, reaggregation code, sampling manifests, checkpoint identities, and figure statistics used in the manuscript **Fixed-observation-budget spatial-gated depth-completion adaptation: cross-scene evaluation and regional error decomposition**.
+This repository contains the frozen evaluation records, protocol files, reaggregation code, sampling manifests, checkpoint identities, and figure statistics used in the manuscript **An Attribution-Aware Empirical Study of Spatially Gated Depth-Completion Adaptation under a Fixed Observation Budget**.
 
 ## What is included
 
 - `resources/or1`: DIODE and OMNI-DC frozen-result summaries and audit records.
 - `resources/or2`: DIODE per-image regional diagnostics and aggregate tables.
 - `resources/or3`: ARKitScenes frozen protocol, per-image scores, regional records, and venue summaries.
+- `resources/or4`: fixed-checkpoint gate intervention on all 304 DIODE and 247 ARKitScenes images, with paired records, physical-unit confidence intervals, coverage, seed effects, and integrity checks.
 - `training_snapshot`: source-domain sampling manifests, loss calibration records, the compact adapter/core snapshot, and a machine-readable parameter/update/latency accounting record.
 - `scripts`: portable gate, metric, reaggregation, integrity-check, and repository-manifest scripts.
 - `manifests/checkpoint_hashes.csv`: model identity and SHA-256 values. Model weights are not redistributed.
@@ -22,6 +23,8 @@ python scripts/reaggregate.py
 ```
 
 The reaggregation command regenerates `derived/principal_rmse_reaggregated.csv` from the published per-image records. It does not need the raw datasets or model weights.
+
+For the fixed-checkpoint intervention, run `python resources/or4/analysis/aggregate_validate_publish.py aggregate`. This reproduces all six endpoints, paired confidence intervals, physical-unit coverage, and seed effects from the released records. Reaggregation overwrites derived summaries and the generated OR4 README; use a disposable clone when checking an immutable snapshot.
 
 ## Scope and exclusions
 
@@ -40,3 +43,5 @@ Original code, documentation, and derived research artifacts in this repository 
 ## Versioned preservation
 
 The existing `v1.0-submission` tag is retained as an immutable record of the first public artifact snapshot. Licensing and post-tag documentation updates will be preserved in a new `v1.0.1-submission` release rather than by moving the existing tag. `ZENODO_RELEASE_CHECKLIST.md` records the remaining metadata and release steps. The repository will display the Zenodo concept DOI and version DOI after the release has been archived; no DOI has been minted yet.
+
+The OR4 submission snapshot is identified by its full Git commit in the manuscript. It includes the MIT license and validated intervention records. The author-metadata-dependent named release and Zenodo deposit remain separate from this publicly accessible, commit-pinned snapshot.

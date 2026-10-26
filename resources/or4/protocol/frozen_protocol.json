@@ -1,0 +1,86 @@
+{
+  "status": "FIXED_CHECKPOINT_GATE_INTERVENTION_FROZEN_BEFORE_NEW_INFERENCE",
+  "created_unix": 1792994154.191922,
+  "scientific_question": "With each trained Spatial checkpoint held fixed, what immediate prediction change results when the per-pixel gate is replaced by its within-image mean at inference?",
+  "intervention": "For the same raw corrector output and same Spatial checkpoint, compute g from support coordinates exactly as in Spatial, then use mean(g) broadcast over the residual map. No parameters, inputs, sampling coordinates, propagation settings, or scoring masks change.",
+  "datasets": {
+    "DIODE": {
+      "cohort": "304 primary images, 3 scenes, 10 scans",
+      "spatial_baseline_record": "external_candidate_freeze_20261016/per_frame/*.csv",
+      "manifest_sha256": "3f4e03c5679b1a7ce819bd60372da584749da45a984354526c1844f94e50a430",
+      "source_plan_sha256": "725e263c2b8727e5698c6b6180e61d74108cf5a72f67a5301fa04354491fb79a",
+      "source_receipt_sha256": "1b8e31956be3c7e37c7652ed84fe65ad89c4d34be94e23b94b51f37c9b361867",
+      "images": 304,
+      "physical_unit": "scene"
+    },
+    "ARKitScenes": {
+      "cohort": "247 images, 20 held-out validation visits/sites",
+      "spatial_baseline_record": "new_scene_validation/per_image/*.csv",
+      "manifest_sha256": "38f90df514ad6255094b7f588efb2c52597af04c53bb0e05e849c58788b5d491",
+      "source_plan_sha256": "8b17d713b448316e2d9e6072ac247a2945b8cf1e0d7edf0b74a4400a22ae31de",
+      "source_receipt_sha256": "0b85f16937567195b355497fe3229b43f86fc167519c96a0fbcedd60edb68eae",
+      "images": 247,
+      "physical_unit": "site"
+    }
+  },
+  "checkpoint_sha256": {
+    "42": "7f5c137f4a495e9b9dc78b1e66b98166a3397e64c69dce274a846a4c89a4f72a",
+    "43": "b4b7c649dfb09aa11b33321acf018a138fa1f36029c59986ed1047c394826e9a",
+    "44": "cf3ca14d98f89925e50c85186b40e43730a7a43fcc7b36b1f622366a4f5380e6"
+  },
+  "parent_checkpoint_sha256": "6332be4b78f100c9b7444d91f7473c35cdab26080ece4a9d294e23b23c901927",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "laws": [
+    "top",
+    "bottom",
+    "center_hole",
+    "diag_main_half",
+    "diag_anti_half",
+    "center_vertical_band",
+    "center_disk",
+    "two_corners"
+  ],
+  "repetitions": 5,
+  "input_points": 500,
+  "modes": [
+    "spatial",
+    "image_mean_intervention"
+  ],
+  "outcomes": [
+    "rmse",
+    "mae",
+    "rel",
+    "unobserved_rmse",
+    "unobserved_mae",
+    "unobserved_rel"
+  ],
+  "aggregation": "Average repetitions and unseen8 layouts within image; average training seeds within image for the main paired endpoint; average images within physical units; weight the 3 DIODE scenes or 20 ARKitScenes sites equally.",
+  "uncertainty": "Paired nonparametric percentile bootstrap over physical units, 200000 resamples, random seed 20261022.",
+  "source_spatial_rows": "Imported from the prior frozen evaluations after receipt/file hash, checkpoint, condition-grid, coordinate, and one-case numerical replay checks.",
+  "pairing_keys": [
+    "dataset",
+    "index",
+    "law",
+    "repetition",
+    "seed",
+    "coordinate_hash",
+    "score_pixels"
+  ],
+  "expected_rows": {
+    "DIODE": 72960,
+    "ARKitScenes": 59280
+  },
+  "code_sha256": {
+    "evaluate_intervention.py": "3c53ba118a1312210667fd662bbccf9088e26f1290a625a67e889dd9f0d7d76c",
+    "aggregate_validate_publish.py": "f68cae8ac5162e78549c64708601b4b6a45a456c4a38d17f99c672dc806c05dc"
+  },
+  "source_identities": {
+    "diode_common.py": "f2f9e197102074bc4de5149a328887c205c61de2bacf1504a349dbe349c3d264",
+    "model_registry.json": "ceb0260d4095e4143594ac0c6f3428a2b5291839edfef1143c3e7b3635972cbb"
+  },
+  "result_policy": "Complete grids only. No retuning, checkpoint selection, case exclusion, target update, scale fitting, or upper clipping. Report the observed sign whether favorable or unfavorable."
+}

@@ -1,0 +1,8 @@
+{
+  "original_code_sha256": "3c53ba118a1312210667fd662bbccf9088e26f1290a625a67e889dd9f0d7d76c",
+  "executed_code_sha256": "147b03450900f337c4cef53fe0fb43d1535b2d6252c17765b3a032feac5a5d8a",
+  "created_unix": 1793023187.9880009,
+  "reason": "Check constant broadcast by exact elementwise equality to the computed FP32 mean, avoiding a second FP32 reduction and its rounding error.",
+  "prediction_computation_changed": false,
+  "protocol_changed": false
+}

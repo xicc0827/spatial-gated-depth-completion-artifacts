@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "dataset": "DIODE",
+  "index": 0,
+  "law": "top",
+  "repetition": 0,
+  "checkpoint_sha256": {
+    "42": "7f5c137f4a495e9b9dc78b1e66b98166a3397e64c69dce274a846a4c89a4f72a",
+    "43": "b4b7c649dfb09aa11b33321acf018a138fa1f36029c59986ed1047c394826e9a",
+    "44": "cf3ca14d98f89925e50c85186b40e43730a7a43fcc7b36b1f622366a4f5380e6"
+  },
+  "maximum_metric_difference": 0.0,
+  "tolerance": 1e-05,
+  "same_gate_mean_max_abs": 0.0,
+  "spatial_gate_std": 0.4183633029460907,
+  "image_mean_gate_std": 0.0,
+  "seeds": [
+    {
+      "seed": 42,
+      "maximum_metric_difference": 0.0
+    },
+    {
+      "seed": 43,
+      "maximum_metric_difference": 0.0
+    },
+    {
+      "seed": 44,
+      "maximum_metric_difference": 0.0
+    }
+  ]
+}

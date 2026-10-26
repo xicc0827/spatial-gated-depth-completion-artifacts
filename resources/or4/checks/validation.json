@@ -1,0 +1,69 @@
+{
+  "status": "PASS",
+  "protocol_sha256": "044a1555c515ac570d59358cbbe12a580fe05fb48a628f519f49a7b1adf6db6f",
+  "total_rows": 132240,
+  "expected_total_rows": 132240,
+  "images": {
+    "diode": 304,
+    "arkitscenes": 247
+  },
+  "complete_condition_grids": true,
+  "all_file_and_receipt_hashes_verified": true,
+  "same_spatial_checkpoint_in_both_modes": true,
+  "checkpoint_sha256": {
+    "42": "7f5c137f4a495e9b9dc78b1e66b98166a3397e64c69dce274a846a4c89a4f72a",
+    "43": "b4b7c649dfb09aa11b33321acf018a138fa1f36029c59986ed1047c394826e9a",
+    "44": "cf3ca14d98f89925e50c85186b40e43730a7a43fcc7b36b1f622366a4f5380e6"
+  },
+  "pairing_keys": [
+    "dataset",
+    "index",
+    "law",
+    "repetition",
+    "seed",
+    "coordinate_hash",
+    "score_pixels"
+  ],
+  "coordinate_and_scoring_mask_pairing_verified": true,
+  "finite_nonnegative_metrics_verified": true,
+  "effective_gate_means_match_max_abs": {
+    "diode": 0.0,
+    "arkitscenes": 0.0
+  },
+  "spatial_replay": {
+    "diode": {
+      "status": "PASS",
+      "maximum_metric_difference": 0.0,
+      "tolerance": 1e-05,
+      "check_sha256": "67bc04bd16a4501efc26d93ce130ebe75792e9ecfd2982bf3d14b5fd7a0265bb"
+    },
+    "arkitscenes": {
+      "status": "PASS",
+      "maximum_metric_difference": 0.0,
+      "tolerance": 1e-05,
+      "check_sha256": "4c6cb771623561e811a5bb099b2b2dbb740fb403403b90465ad685767669f5b5"
+    }
+  },
+  "source_spatial_records": {
+    "DIODE": {
+      "record": "external_candidate_freeze_20261016/per_frame/*.csv",
+      "receipt_sha256": "1b8e31956be3c7e37c7652ed84fe65ad89c4d34be94e23b94b51f37c9b361867",
+      "plan_sha256": "725e263c2b8727e5698c6b6180e61d74108cf5a72f67a5301fa04354491fb79a"
+    },
+    "ARKitScenes": {
+      "record": "new_scene_validation/per_image/*.csv",
+      "receipt_sha256": "0b85f16937567195b355497fe3229b43f86fc167519c96a0fbcedd60edb68eae",
+      "plan_sha256": "8b17d713b448316e2d9e6072ac247a2945b8cf1e0d7edf0b74a4400a22ae31de"
+    }
+  },
+  "aggregation_independent_recalculation_max_abs": {
+    "diode": 2.220446049250313e-16,
+    "arkitscenes": 0.0
+  },
+  "bootstrap": {
+    "method": "paired nonparametric percentile over physical units",
+    "repetitions": 200000,
+    "base_seed": 20261022
+  },
+  "result_sign_policy": "Complete grids only. No retuning, checkpoint selection, case exclusion, target update, scale fitting, or upper clipping. Report the observed sign whether favorable or unfavorable."
+}

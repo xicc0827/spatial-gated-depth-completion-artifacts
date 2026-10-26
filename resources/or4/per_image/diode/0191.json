@@ -1,0 +1,16 @@
+{
+  "status": "COMPLETE",
+  "dataset": "DIODE",
+  "index": 191,
+  "protocol_sha256": "044a1555c515ac570d59358cbbe12a580fe05fb48a628f519f49a7b1adf6db6f",
+  "converted_sha256": "e1cffd1842f529fb9ce1b89891e8b6f82b9cd04c989103749a257eccc1783fbd",
+  "archived_source_sha256": "37d8eb6403c6592e2b4ce5e159d0bafd39e0332a97b846becb30514f4346a3dd",
+  "result_sha256": "f5c1a934234bce6dff9e0a2dbdf835e55daccc6d0f41fde919ccf7f5c8f26bfa",
+  "rows": 240,
+  "conditions": 240,
+  "checkpoint_sha256": {
+    "42": "7f5c137f4a495e9b9dc78b1e66b98166a3397e64c69dce274a846a4c89a4f72a",
+    "43": "b4b7c649dfb09aa11b33321acf018a138fa1f36029c59986ed1047c394826e9a",
+    "44": "cf3ca14d98f89925e50c85186b40e43730a7a43fcc7b36b1f622366a4f5380e6"
+  }
+}
