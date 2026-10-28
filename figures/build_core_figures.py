@@ -13,7 +13,7 @@ from matplotlib.patches import FancyArrowPatch, FancyBboxPatch
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "derived" / "figures"
-STATS_DIR = Path(__file__).resolve().parent
+STATS_DIR = OUT
 SEED = 20261022
 REPS = 200_000
 
@@ -34,12 +34,12 @@ COLORS = {
 mpl.rcParams.update({
     "font.family": "serif",
     "font.serif": ["Times New Roman", "SimSun", "DejaVu Serif"],
-    "font.size": 8.5,
-    "axes.titlesize": 9.5,
-    "axes.labelsize": 8.5,
-    "xtick.labelsize": 8,
-    "ytick.labelsize": 8.5,
-    "legend.fontsize": 8,
+    "font.size": 9.5,
+    "axes.titlesize": 10.5,
+    "axes.labelsize": 9.5,
+    "xtick.labelsize": 9.5,
+    "ytick.labelsize": 9.5,
+    "legend.fontsize": 9.5,
     "svg.fonttype": "none",
     "pdf.fonttype": 42,
     "ps.fonttype": 42,
@@ -220,12 +220,13 @@ def save_all(fig: plt.Figure, stem: str) -> None:
     plt.close(fig)
 
 
-def add_box(ax, xy, width, height, text, *, fc, ec, fontsize=8.2, weight="normal"):
+def add_box(ax, xy, width, height, text, *, fc, ec, fontsize=9.5, weight="normal"):
     x, y = xy
     patch = FancyBboxPatch(
         (x, y), width, height,
         boxstyle="round,pad=0.012,rounding_size=0.025",
         facecolor=fc, edgecolor=ec, linewidth=1.0,
+        clip_on=False,
     )
     ax.add_patch(patch)
     ax.text(x + width / 2, y + height / 2, text, ha="center", va="center",
@@ -243,54 +244,53 @@ def arrow(ax, start, end, *, color=None, style="-"):
 
 
 def draw_method_figure() -> None:
-    fig, ax = plt.subplots(figsize=(7.05, 3.15))
+    fig = plt.figure(figsize=(7.05, 4.50))
+    ax = fig.add_axes([0.01, 0.01, 0.98, 0.98])
     ax.set_xlim(0, 1)
     ax.set_ylim(0, 1)
     ax.axis("off")
+    ax.text(0.005, 0.975, "Shared computation and correction interface", fontsize=10.5,
+            va="top", weight="bold")
+    boxes = [
+        (0.005, 0.175, "RGB, sparse depth\nand support mask\n500 points"),
+        (0.225, 0.170, "Frozen parent\nfeature extractor"),
+        (0.440, 0.125, "Initial depth\n$D_i^{init}$"),
+        (0.610, 0.145, "Add correction\n(see modes below)"),
+        (0.800, 0.190, "Frozen propagation\nand output head"),
+    ]
+    for x, w, label in boxes:
+        add_box(ax, (x, 0.760), w, 0.145, label, fc="#E9EEF3", ec="#596A7A")
+    for left, right in zip(boxes[:-1], boxes[1:]):
+        arrow(ax, (left[0] + left[1] + 0.01, 0.832), (right[0] - 0.01, 0.832))
+    add_box(ax, (0.285, 0.565), 0.280, 0.130,
+            "7-channel corrector + mean filter\n24,513 trainable parameters\n" + r"$L(\delta_i^{S})$ or $L(\delta_i^{M})$",
+            fc="#E8F4FB", ec=COLORS["spatial"])
+    add_box(ax, (0.625, 0.565), 0.285, 0.130,
+            "Support-distance gate\n" + r"$g_i(p)$ or image mean $\bar g_i$",
+            fc="#FDF1E3", ec=COLORS["image_mean"])
+    arrow(ax, (0.500, 0.760), (0.500, 0.695), color="#596A7A")
+    arrow(ax, (0.565, 0.655), (0.645, 0.760), color=COLORS["spatial"])
+    arrow(ax, (0.735, 0.695), (0.715, 0.760), color=COLORS["image_mean"])
+    ax.text(0.005, 0.645, "RGB, sparse depth,\nmask and initial depth\nform corrector input", va="center", fontsize=9.5)
 
-    add_box(ax, (0.015, 0.49), 0.14, 0.25, "RGB + sparse depth\nmask; 500 points", fc="#F2F2F2", ec="#777777")
-    add_box(ax, (0.205, 0.51), 0.145, 0.21, "Frozen parent\nfeature extractor", fc="#E9EEF3", ec="#596A7A", weight="bold")
-    add_box(ax, (0.395, 0.55), 0.135, 0.17, "Initial dense depth\n$D^{init}$", fc="#E9EEF3", ec="#596A7A")
-    arrow(ax, (0.155, 0.615), (0.205, 0.615))
-    arrow(ax, (0.35, 0.615), (0.395, 0.635))
-
-    add_box(ax, (0.395, 0.17), 0.16, 0.22, "Lightweight corrector\n7-channel input\n24,513 parameters", fc="#E8F4FB", ec=COLORS["spatial"], weight="bold")
-    arrow(ax, (0.155, 0.54), (0.395, 0.29), color="#777777", style="--")
-    arrow(ax, (0.462, 0.55), (0.462, 0.39), color="#596A7A")
-    add_box(ax, (0.59, 0.18), 0.12, 0.18, "Filtered residual\n" + r"$L(\delta)$", fc="#E8F4FB", ec=COLORS["spatial"])
-    arrow(ax, (0.555, 0.28), (0.59, 0.27), color=COLORS["spatial"])
-
-    add_box(ax, (0.59, 0.56), 0.12, 0.17, "Support-distance gate\n$g(p)$; mean $\\bar{g}$", fc="#FDF1E3", ec=COLORS["image_mean"], fontsize=7.1)
-
-    branch = FancyBboxPatch(
-        (0.745, 0.20), 0.16, 0.55,
-        boxstyle="round,pad=0.012,rounding_size=0.025",
-        facecolor="#FAFAFA", edgecolor="#777777", linewidth=1.0,
-    )
-    ax.add_patch(branch)
-    ax.text(0.825, 0.705, "Spatial", ha="center", va="center", fontsize=8.5,
-            weight="bold", color=COLORS["spatial"])
-    ax.text(0.825, 0.62, r"$D^{init}+\sigma g(p)L(\delta)$", ha="center", va="center", fontsize=7.4)
-    ax.plot([0.762, 0.888], [0.535, 0.535], color="#D9D9D9", lw=0.8)
-    ax.text(0.825, 0.485, "Image Mean", ha="center", va="center", fontsize=8.5,
-            weight="bold", color=COLORS["image_mean"])
-    ax.text(0.825, 0.40, r"$D^{init}+\sigma\bar{g}L(\delta)$", ha="center", va="center", fontsize=7.4)
-    ax.plot([0.762, 0.888], [0.315, 0.315], color="#D9D9D9", lw=0.8)
-    ax.text(0.825, 0.265, "Parent", ha="center", va="center", fontsize=8.5,
-            weight="bold", color=COLORS["muted"])
-    ax.text(0.825, 0.225, r"$D^{init}$", ha="center", va="center", fontsize=8.0)
-
-    arrow(ax, (0.71, 0.64), (0.745, 0.62), color=COLORS["image_mean"])
-    arrow(ax, (0.71, 0.27), (0.745, 0.43), color=COLORS["spatial"])
-
-    add_box(ax, (0.915, 0.30), 0.08, 0.36, "Frozen\npropagation\n+ output\nhead", fc="#E9EEF3", ec="#596A7A", fontsize=6.9)
-    arrow(ax, (0.905, 0.66), (0.915, 0.59), color=COLORS["spatial"])
-    arrow(ax, (0.905, 0.47), (0.915, 0.48), color=COLORS["image_mean"])
-    arrow(ax, (0.905, 0.255), (0.915, 0.37), color="#777777")
-
-    ax.text(0.015, 0.91, "Shared input and frozen parent", fontsize=8.4, weight="bold", color=COLORS["muted"])
-    ax.text(0.395, 0.91, "Shared corrector architecture and training protocol", fontsize=8.4,
-            weight="bold", color=COLORS["muted"])
+    ax.text(0.005, 0.495, "Execution mode", weight="bold", fontsize=10.0)
+    ax.text(0.390, 0.495, "Correction added to initial depth", weight="bold", fontsize=10.0)
+    ax.text(0.760, 0.495, "Corrector weights", weight="bold", fontsize=10.0)
+    rows = [
+        (0.435, "Parent", r"$0$", "None", COLORS["muted"]),
+        (0.365, "Spatial", r"$\sigma_i g_i\odot L(\delta_i^{S})$", r"$\theta_S$", COLORS["spatial"]),
+        (0.295, "Image Mean (separately trained)", r"$\sigma_i\bar g_i L(\delta_i^{M})$", r"$\theta_M$", COLORS["image_mean"]),
+        (0.225, "Fixed-checkpoint mean gate", r"$\sigma_i\bar g_i L(\delta_i^{S})$", r"Same $\theta_S$ as Spatial", COLORS["green"]),
+    ]
+    ax.plot([0.005, 0.99], [0.475, 0.475], color="#777777", lw=0.8)
+    for y, label, correction, weights, color in rows:
+        ax.text(0.005, y, label, va="center", color=color, fontsize=9.5)
+        ax.text(0.465, y, correction, va="center", fontsize=10.0)
+        ax.text(0.760, y, weights, va="center", fontsize=9.5)
+    ax.plot([0.005, 0.99], [0.185, 0.185], color="#777777", lw=0.8)
+    ax.text(0.005, 0.130, "Spatial vs Parent: whole-adapter effect", fontsize=9.5)
+    ax.text(0.005, 0.080, "Spatial vs Image Mean: complete training-and-gating design", fontsize=9.5)
+    ax.text(0.005, 0.030, "Spatial vs fixed-checkpoint mean gate: immediate gate dependence; weights and residual held fixed", fontsize=9.5)
     save_all(fig, "图1_空间门控适配框架")
 
 
@@ -298,7 +298,7 @@ def draw_performance_figure(plot_data: dict) -> None:
     fig, axes = plt.subplots(1, 2, figsize=(7.05, 3.65), gridspec_kw={"wspace": 0.33})
     panel_specs = [
         ("DIODE", axes[0], (-0.76, 0.10), "3 scenes; 10 scans"),
-        ("ARKitScenes", axes[1], (-0.115, 0.065), "20 venues"),
+        ("ARKitScenes", axes[1], (-0.115, 0.065), "20 sites"),
     ]
     rng = np.random.default_rng(111)
     for panel, (dataset, ax, xlim, subtitle) in enumerate(panel_specs):
@@ -319,11 +319,11 @@ def draw_performance_figure(plot_data: dict) -> None:
                         zorder=4)
             label = f"lower in {item['benefit']}/{item['n_points']}"
             ax.text(0.985, y + 0.22, label, transform=ax.get_yaxis_transform(), ha="right", va="center",
-                    fontsize=7.6, color=color)
+                    fontsize=9.5, color=color)
         ax.set_xlim(*xlim)
         ax.set_ylim(-0.52, 1.52)
         ax.set_yticks([1, 0], ["vs Parent", "vs Image Mean"])
-        ax.set_xlabel("Paired ΔRMSE (m)  ← lower for Spatial")
+        ax.set_xlabel("Paired ΔRMSE (m)\n← lower for Spatial")
         ax.set_title(f"{dataset}\n{subtitle}", loc="left", pad=7, weight="bold")
         ax.text(-0.12, 1.12, f"({chr(97 + panel)})", transform=ax.transAxes,
                 fontsize=9.5, weight="bold", va="top")
@@ -333,7 +333,7 @@ def draw_performance_figure(plot_data: dict) -> None:
 
     legend = [
         Line2D([0], [0], marker="o", linestyle="None", markerfacecolor="white",
-               markeredgecolor=COLORS["muted"], markersize=5.0, label="scan / venue"),
+               markeredgecolor=COLORS["muted"], markersize=5.0, label="scan / site"),
         Line2D([0], [0], marker="D", color=COLORS["ink"], markersize=5.3,
                linewidth=1.8, label="equal-unit estimate (95% CI)"),
     ]
@@ -356,7 +356,7 @@ def draw_region_figure(plot_data: dict) -> None:
     rng = np.random.default_rng(222)
     for panel, (dataset, ax, subtitle) in enumerate([
         ("DIODE", axes[0], "3 scenes"),
-        ("ARKitScenes", axes[1], "20 venues"),
+        ("ARKitScenes", axes[1], "20 sites"),
     ]):
         ax.axvline(0, color="#333333", lw=0.9, zorder=0)
         for y, (reg, label, color, marker) in zip(range(4, -1, -1), display):

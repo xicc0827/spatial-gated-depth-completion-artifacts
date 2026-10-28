@@ -1,0 +1,117 @@
+{
+  "dataset": "arkitscenes",
+  "index": 0,
+  "image": "42898818_168161.160.png",
+  "law": "top",
+  "repetition": 0,
+  "seed": 42,
+  "coordinate_hash": "32ccc72dc43ba12279dd2c958f83098a7d70c8832c78fb85cb224292a2eb35f5",
+  "score_pixels": 61058,
+  "input_points": 500,
+  "checkpoint_sha256": {
+    "parent": "6332be4b78f100c9b7444d91f7473c35cdab26080ece4a9d294e23b23c901927",
+    "spatial": "7f5c137f4a495e9b9dc78b1e66b98166a3397e64c69dce274a846a4c89a4f72a",
+    "image_mean": "bb88cd800c35bea25bb6b15641e8585ec2a57cd9bacb5c1bad5482789124d36c"
+  },
+  "environment": {
+    "torch": "2.7.0+cu128",
+    "torchvision": "0.22.0+cu128",
+    "timm": "0.6.13",
+    "device": "cuda"
+  },
+  "gate_mean": 0.5656635761260986,
+  "gate_std": 0.419761598110199,
+  "metrics": {
+    "parent": {
+      "rmse": 0.3206529605068893,
+      "mae": 0.20815314028854198,
+      "rel": 0.16162712209248664,
+      "unobserved_rmse": 0.32197373906294335,
+      "unobserved_mae": 0.20985996764612275,
+      "unobserved_rel": 0.16295509435739453
+    },
+    "spatial": {
+      "rmse": 0.4099141219451879,
+      "mae": 0.2773442696687838,
+      "rel": 0.22318952798102262,
+      "unobserved_rmse": 0.41160268897894225,
+      "unobserved_mae": 0.2796226624331633,
+      "unobserved_rel": 0.22502596243521453
+    },
+    "image_mean_intervention": {
+      "rmse": 0.37182183233985583,
+      "mae": 0.2866403737723087,
+      "rel": 0.21543210953250969,
+      "unobserved_rmse": 0.3730876509613654,
+      "unobserved_mae": 0.2879327909627306,
+      "unobserved_rel": 0.2165865749228909
+    },
+    "image_mean": {
+      "rmse": 0.454047065302282,
+      "mae": 0.30706965135908715,
+      "rel": 0.24645450236563973,
+      "unobserved_rmse": 0.45591673617918704,
+      "unobserved_mae": 0.3095476647605866,
+      "unobserved_rel": 0.24845872144967146
+    }
+  },
+  "replay_checks": [
+    {
+      "reference": "OR4",
+      "maximum_absolute_metric_difference": 0.0,
+      "tolerance": 1e-05,
+      "passed": true,
+      "differences": {
+        "spatial": {
+          "rmse": 0.0,
+          "mae": 0.0,
+          "rel": 0.0,
+          "unobserved_rmse": 0.0,
+          "unobserved_mae": 0.0,
+          "unobserved_rel": 0.0
+        },
+        "image_mean_intervention": {
+          "rmse": 0.0,
+          "mae": 0.0,
+          "rel": 0.0,
+          "unobserved_rmse": 0.0,
+          "unobserved_mae": 0.0,
+          "unobserved_rel": 0.0
+        }
+      }
+    },
+    {
+      "reference": "original condition records",
+      "maximum_absolute_metric_difference": 0.0,
+      "tolerance": 1e-05,
+      "passed": true,
+      "differences": {
+        "parent": {
+          "rmse": 0.0,
+          "mae": 0.0,
+          "rel": 0.0,
+          "unobserved_rmse": 0.0,
+          "unobserved_mae": 0.0,
+          "unobserved_rel": 0.0
+        },
+        "spatial": {
+          "rmse": 0.0,
+          "mae": 0.0,
+          "rel": 0.0,
+          "unobserved_rmse": 0.0,
+          "unobserved_mae": 0.0,
+          "unobserved_rel": 0.0
+        },
+        "image_mean": {
+          "rmse": 0.0,
+          "mae": 0.0,
+          "rel": 0.0,
+          "unobserved_rmse": 0.0,
+          "unobserved_mae": 0.0,
+          "unobserved_rel": 0.0
+        }
+      }
+    }
+  ],
+  "status": "PASS"
+}
